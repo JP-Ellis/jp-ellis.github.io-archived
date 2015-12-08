@@ -1,0 +1,7 @@
+[submodule "plugins/pelican-plugins"]
+	path = plugins/pelican-plugins
+	url = git@github.com:getpelican/pelican-plugins.git
+[submodule "output"]
+	path = output
+	url = git@github.com:JP-Ellis/jp-ellis.github.io.git
+	branch = master
