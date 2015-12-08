@@ -1,0 +1,7 @@
+[submodule "submodules/share-button"]
+	path = submodules/share-button
+	url = git@github.com:carrot/share-button.git
+[submodule "submodules/bootstrap"]
+	path = submodules/bootstrap
+	url = git@github.com:twbs/bootstrap.git
+	branch = v4-dev

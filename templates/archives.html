@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Archives &ndash; {% endblock %}
+
+{% block content %}
+<header>
+  <h1>Archives{% if period %} for {{ period | reverse | join(' ') }}{% endif %}</h1>
+</header>
+{% for article in dates %}
+{% include "includes/article-summary.html" %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block title %}Tag {{ tag }} &ndash; {% endblock %}
+
+{% block content %}
+<header>
+  <h1>Tag: {{ tag }}</h1>
+</header>
+{% for article in articles %}
+{% include "includes/article-summary.html" %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,49 @@
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5 * $spacer;
+    margin-bottom: $spacer-y;
+    padding: 0.5 * $spacer;
+    border: $gray;
+    background: $gray-lightest;
+    @include shadow(1);
+
+    @media screen and (min-width: map_get($grid-breakpoints, md)) {
+        margin: $spacer;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $gray-lighter;
+        margin-bottom: $spacer-y;
+
+        h1, h2 {
+            color: $brand-primary;
+            flex-grow: 1;
+            flex-shrink: 0;
+            margin-right: $spacer-x;
+            margin-top: 0;
+        }
+
+        .article-info {
+            color: $gray;
+            text-align: right;
+            flex-shrink: 1;
+            font-size: $font-size-sm;
+
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+    }
+
+    .continue-reading {
+        display: flex;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for article in articles_page.object_list %}
+{% include "includes/article-summary.html" %}
+{% endfor %}
+
+{% include "includes/pagination.html" %}
+{% endblock %}
+
+{% block additional_js %}
+{% include "includes/jsonld.html" %}
+{% include "includes/disqus-count.html" %}
+{% endblock %}

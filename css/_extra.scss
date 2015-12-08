@@ -1,0 +1,15 @@
+share-button {
+    color: white;
+    background-color: $brand-primary;
+    margin-left: auto;
+    margin-bottom: auto;
+
+    &:hover {
+        color: white;
+        background-color: $brand-primary-dark;
+    }
+
+    &:before {
+        top: 8px;
+    }
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Categories &ndash; {% endblock %}
+
+{% block content %}
+<header>
+  <h1>Categories</h1>
+</header>
+<article>
+  <ul class="aggregate-list">
+    {% for author, articles in categories|sort %}
+    <li>
+      <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+      <span class="label label-primary">{{ articles|count }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+{% endblock %}

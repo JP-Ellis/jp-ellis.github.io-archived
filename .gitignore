@@ -1,0 +1,6 @@
+/.sass-cache
+/Gemfile.lock
+/bower_components
+/node_modules
+/static
+/.tern-port

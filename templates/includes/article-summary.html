@@ -1,0 +1,17 @@
+<article>
+  <header>
+    <h2><a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a></h2>
+    <div class="article-info">
+      <span class="article-date">Posted on {{ article.locale_date }} </span>
+      {% if DISQUS_SITENAME %}
+      <span class="article-comment">
+        <a href="{{ SITEBASE }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.date|strftime('%Y-%m-%d') }}-{{ article.slug }}">Leave a comment</a>
+      </span>
+      {% endif %}
+    </div>
+  </header>
+  <div class="summary">
+    {{ article.summary }}
+  </div>
+  <a class="continue-reading" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}"><button type="button" class="btn btn-primary">Continue reading</button></a>
+</article>

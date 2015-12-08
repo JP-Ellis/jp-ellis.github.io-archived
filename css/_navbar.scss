@@ -1,0 +1,36 @@
+.content > nav {
+    font-size: $font-size-h3;
+    color: white;
+    background-color: $brand-primary;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    a:first-child {
+        font-size: $font-size-h2;
+    }
+
+    a {
+        display: inline-block;
+        margin: 0.5rem $spacer-x;
+        color: white;
+        &:hover {
+            color: darken(white, 10%);
+        }
+    }
+
+    .home {
+        vertical-align: center;
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            vertical-align: -5px;
+            margin-right: 8px;
+            background-size: 100% 100%;
+            background-position: center;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMjB2LTZoNHY2aDV2LThoM0wxMiAzIDIgMTJoM3Y4eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=");
+        }
+    }
+}

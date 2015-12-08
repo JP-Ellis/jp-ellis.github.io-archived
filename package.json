@@ -1,0 +1,25 @@
+{
+    "name": "jp-ellis",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "gulp": "*",
+        "del": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-compass": "*",
+        "gulp-livereload": "*",
+        "gulp-minify": "*",
+        "gulp-minify-css": "*",
+        "gulp-rename": "*",
+        "gulp-uncss": "*",
+        "gulp-wait": "*",
+        "vinyl-paths": "*"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}

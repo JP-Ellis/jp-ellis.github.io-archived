@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<meta name="author" content="{{ article.author.name }}" />
+<meta name="description" content="{{ article.summary|striptags }}" />
+<meta name="keywords" content="{{ article.tags|join(', ') }}">
+{% include "includes/open-graph-article.html" %}
+{% endblock %}
+
+{% block title %}{{ article.title }} &ndash; {% endblock %}
+
+{% block content %}
+<article>
+  <header>
+    <div class="header-left">
+      <h1 id="{{ article.slug }}">{{ article.title }}</h1>
+      <span class="article-date">Posted on {{ article.locale_date }}</span>
+    </div>
+    <share-button></share-button>
+    <script>new ShareButton({ui: {flyout: "top left"}, networks: {pinterest: {enabled: false}}});</script>
+  </header>
+  <div class="content">
+    {{ article.content }}
+  </div>
+  {% if article.tags %}
+  <div class="tags">
+    {% for tag in article.tags %}
+    <a class="label label-primary" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% include "includes/disqus.html" %}
+</article>
+{% endblock %}
+
+{% block additional_js %}
+{% include "includes/jsonld-article.html" %}
+{% endblock %}

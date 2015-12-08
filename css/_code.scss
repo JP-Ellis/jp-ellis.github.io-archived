@@ -1,0 +1,107 @@
+@import "pygments";
+
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp,
+tt {
+    font-family: $font-family-monospace;
+}
+
+// Inline code
+code {
+    padding: .2rem .4rem;
+    font-size: 90%;
+    @include border-radius($border-radius);
+    @include pygments-solarized(light);
+}
+
+// User input typically entered via keyboard
+kbd {
+    padding: .2rem .4rem;
+    font-size: 90%;
+    color: $kbd-color;
+    background-color: $kbd-bg;
+    @include border-radius($border-radius-sm);
+    @include box-shadow(inset 0 -.1rem 0 rgba(0,0,0,.25));
+
+    kbd {
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        @include box-shadow(none);
+    }
+}
+
+// Blocks of code
+:not(.highlight) > pre {
+    display: block;
+    font-size: 90%;
+    margin: 0;
+    margin-bottom: $spacer-y;
+    line-height: $line-height;
+    max-height: $pre-scrollable-max-height;
+    overflow-y: scroll;
+    @include pygments-solarized(dark);
+
+    // Account for some code outputs that place code tags in pre tags
+    code {
+        padding: 0;
+        font-size: inherit;
+        color: inherit;
+        background-color: transparent;
+        border-radius: 0;
+    }
+}
+
+// Pygment
+////////////////////////////////////////////////////////////////////////////////
+// Highlight Table
+.highlighttable {
+    width: 100%;
+    display: block;
+    font-size: 90%;
+    margin-bottom: $spacer-y;
+    line-height: $line-height;
+    max-height: $pre-scrollable-max-height;
+    overflow-y: scroll;
+    overflow-x: auto;
+    @include pygments-solarized(dark);
+
+    .syntax-inverted & {
+        @include pygments-solarized(light);
+    }
+
+    .linenos {
+        width: 1%;
+        min-width: 2*$spacer-x;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 0.2*$spacer;
+        background-color: $solarized-base02;
+        text-align: right;
+        pre {
+            background-color: inherit;
+        }
+    }
+
+    .code {
+        padding: 0.2*$spacer;
+    }
+
+    pre {
+        white-space: pre;
+        overflow: hidden;
+        margin-bottom: 0;
+        font-size: 90%;
+
+        code {
+            padding: 0;
+            font-size: inherit;
+            color: inherit;
+            background-color: transparent;
+            border-radius: 0;
+        }
+    }
+}

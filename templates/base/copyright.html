@@ -1,0 +1,13 @@
+<p>
+  {% if CC_LICENSE %}
+  <a rel="license" href="http://creativecommons.org/licenses/{{ CC_LICENSE['slug'] }}/{{ CC_LICENSE['version'] }}/">
+    <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/{{ CC_LICENSE['slug'] }}/{{ CC_LICENSE['version'] }}/80x15.png"/>
+  </a>
+  &copy; {{ AUTHOR }} {{ COPYRIGHT_YEAR }} &ndash;
+  This work is licensed under an <a rel="license" href="http://creativecommons.org/licenses/{{ CC_LICENSE['slug'] }}/{{ CC_LICENSE['version'] }}/">
+    {{ CC_LICENSE['name'] }} {{ CC_LICENSE['version'] }} International License
+  </a>
+  {% else %}
+  &copy; {{ AUTHOR }} {{ COPYRIGHT_YEAR }}
+  {% endif %}
+</p>

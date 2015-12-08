@@ -1,0 +1,20 @@
+\documentclass[tikz,convert={
+  command=\unexpanded{
+    pdftocairo -png -singlefile -transp -scale-to 16 \infile\space\outname-16;
+    pdftocairo -png -singlefile -transp -scale-to 32 \infile\space\outname-32;
+    pdftocairo -png -singlefile -transp -scale-to 64 \infile\space\outname-64;
+    pdftocairo -png -singlefile -transp -scale-to 128 \infile\space\outname-128;
+    pdftocairo -png -singlefile -transp -scale-to 256 \infile\space\outname-256;
+  }
+}]{standalone}
+
+\begin{document}
+\begin{tikzpicture}[x=1pt, y=1pt, line width=3]
+  \useasboundingbox (-16, -16) -- (16, 16);
+  \draw (-7, -7) circle [radius=6];
+  \draw (-13, -7) -- (-13, 8);
+  \foreach \radius in {13, 20} {
+    \draw (-7 + \radius, -7) arc [start angle=0, end angle=100, radius=\radius];
+};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,27 @@
+@import "pygments";
+
+.docutils {
+    &.literal {
+        padding: .2rem .4rem;
+        font-size: 90%;
+        @include border-radius($border-radius);
+        @include pygments-solarized(light);
+    }
+
+    &.footnote {
+        width: 100%;
+        padding-top: 0.5*$spacer-y;
+        margin-bottom: $spacer;
+        font-size: $font-size-sm;
+        border-top: 1px solid $gray;
+
+        .label {
+            font-size: 1em;
+        }
+    }
+}
+
+.footnote-reference {
+    vertical-align: super;
+    font-size: $font-size-xs;
+}

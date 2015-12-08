@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block title %}Posts by {{ author }} &ndash; {% endblock %}
+
+{% block content %}
+<header>
+  <h1>Posts by {{ author }}</h1>
+</header>
+{% for article in articles %}
+{% include "includes/article-summary.html" %}
+{% endfor %}
+{% endblock %}
