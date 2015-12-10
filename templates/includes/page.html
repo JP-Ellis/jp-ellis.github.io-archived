@@ -1,0 +1,16 @@
+<article>
+  <header>
+    <h1 id="{{ page.slug }}">{{ page.title }}</h1>
+    {% if page.github %}
+    <div class="github">
+      <a href="{{ page.github }}"><span class="btn btn-primary">Github</span></a>
+      {% if page.release %}
+      <a href="{{ page.github }}releases/latest"><span class="btn btn-primary">Download</span></a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+  <div>
+    {{ page.content }}
+  </div>
+</article>

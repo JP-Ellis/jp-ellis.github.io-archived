@@ -2,12 +2,5 @@
 {% block title %}{{ page.title }} &ndash; {% endblock %}
 
 {% block content %}
-<article>
-  <header>
-    <h1 id="{{ page.slug }}">{{ page.title }}</h1>
-  </header>
-  <div>
-    {{ page.content }}
-  </div>
-</article>
+{% include "includes/page.html" %}
 {% endblock %}
