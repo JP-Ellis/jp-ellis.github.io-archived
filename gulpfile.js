@@ -58,10 +58,8 @@ gulp.task('submodules', ['share-button']);
 
 gulp.task('share-button', function() {
     gulp.src('submodules/share-button/dist/*.min.css')
-        .pipe(minifyCss())
         .pipe(gulp.dest('static/css'));
     gulp.src('submodules/share-button/dist/*.min.js')
-        .pipe(minifyJs())
         .pipe(gulp.dest('static/js'));
 });
 
