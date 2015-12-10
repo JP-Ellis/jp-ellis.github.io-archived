@@ -19,6 +19,19 @@ OG_LOCALE = DEFAULT_LANG
 FAVICON = ''
 CC_LICENSE = {'name': 'Attribution-ShareAlike', 'slug': "by-sa", 'version': "4.0"}
 
+FRONTMATTER = """
+
+<p>Welcome to my blog!  My name's Joshua Ellis and I am a physics masters
+candidate at <a href="https://unimelb.edu.au">The University of Melbourne</a>.
+</p>
+
+<p>I intend to collect various things I learn in this blog, sometimes for my own
+record keeping purposes, and sometimes because it might be useful to someone
+else out there.  Feel free to share what you like, and I'd love to hear your
+feedback.</p>
+
+"""
+
 # Theme
 ################################################################################
 THEME = 'themes/jp-ellis'
