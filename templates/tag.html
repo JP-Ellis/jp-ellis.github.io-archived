@@ -5,7 +5,9 @@
 <header>
   <h1>Tag: {{ tag }}</h1>
 </header>
-{% for article in articles %}
+{% for article in articles_page.object_list %}
 {% include "includes/article-summary.html" %}
 {% endfor %}
+
+{% include "includes/pagination.html" %}
 {% endblock %}
