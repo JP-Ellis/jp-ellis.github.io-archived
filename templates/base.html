@@ -26,7 +26,12 @@
       {% include 'base/sidebar.html' %}
     </aside>
     <div class="content">
-      {% include 'base/navbar.html' %}
+      <nav>
+        <ul class="breadcrumb">
+          <li class="home"><a href="{{ SITEURL }}">Home</a></li>
+          {% block breadcrumbs %}{% endblock %}
+        </ul>
+      </nav>
       <main>
         {% block content %}
         {% endblock %}

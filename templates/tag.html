@@ -1,6 +1,11 @@
 {% extends "index.html" %}
 {% block title %}Tag {{ tag }} &ndash; {% endblock %}
 
+{% block breadcrumbs %}
+<li class="inter"><a href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a></li>
+<li class="active">{{ tag }}</li>
+{% endblock %}
+
 {% block content %}
 <header>
   <h1>Tag: {{ tag }}</h1>

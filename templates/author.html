@@ -1,6 +1,11 @@
 {% extends "index.html" %}
 {% block title %}Posts by {{ author }} &ndash; {% endblock %}
 
+{% block breadcrumbs %}
+<li class="inter"><a href="{{ SITEURL }}/{{ AUTHORS_URL }}">Authors</a></li>
+<li class="active">{{ author }}</li>
+{% endblock %}
+
 {% block content %}
 <header>
   <h1>Posts by {{ author }}</h1>

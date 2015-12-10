@@ -9,6 +9,12 @@
 
 {% block title %}{{ article.title }} &ndash; {% endblock %}
 
+{% block breadcrumbs %}
+<li class="inter"><a href="{{ SITEURL }}/{{ article.date|strftime('%Y') }}/">{{ article.date|strftime('%Y') }}</a></li>
+<li class="inter"><a href="{{ SITEURL }}/{{ article.date|strftime('%Y') }}/{{ article.date|strftime('%m') }}/">{{ article.date|strftime('%B') }}</a></li>
+<li class="active">{{ article.title }}</li>
+{% endblock %}
+
 {% block content %}
 <article>
   <header>

@@ -1,6 +1,11 @@
 {% extends "index.html" %}
 {% block title %}Category {{ category }} &ndash; {% endblock %}
 
+{% block breadcrumbs %}
+<li class="inter"><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}">Categories</a></li>
+<li class="active">{{ category }}</li>
+{% endblock %}
+
 {% block content %}
 <header>
   <h1>Posts in {{ category }}</h1>
