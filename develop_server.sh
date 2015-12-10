@@ -85,9 +85,14 @@ function start_up(){
 ###
 #  MAIN
 ###
-[[ ($# -eq 0) || ($# -gt 2) ]] && usage
+[[ $# -gt 2 ]] && usage
 port=''
 [[ $# -eq 2 ]] && port=$2
+
+if [[ $# -eq 0 ]]; then
+    shut_down
+    start_up $port
+fi
 
 if [[ $1 == "stop" ]]; then
   shut_down
