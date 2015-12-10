@@ -29,7 +29,7 @@ Github Pages Setup
 I am using `Github Pages <https://pages.github.com/>`_ for this website which
 serves the ``master`` branch from the repository called ``jp-ellis.github.io``.
 I keep the source code in the ``source`` branch which is independent to the
-``master`` branch (and similarly for the ``theme`` branch tracks [1]_).
+``master`` branch (and similarly for the ``theme`` branch tracks [#theme]_).
 
 The idea is to create separate repositories with separate branch names, and then
 afterwards push them to the same remote repository:
@@ -122,7 +122,8 @@ need for that as it is run before ``git push``.  The annotated content of my
 Finally, with all this setup I just need to run ``git push`` and the website will be automatically updated!
 
 
-.. [1] The reason for the theme being tracked in a separate branch is that I may
-       end up moving the branch to its own proper repository in the future, and
-       I could do the same for the source branch though I think it makes more
-       sense to keep the source and output in the same repositories.
+.. [#theme] The reason for the theme being tracked in a separate branch is that
+            I may end up moving the branch to its own proper repository in the
+            future, and I could do the same for the source branch though I think
+            it makes more sense to keep the source and output in the same
+            repositories.

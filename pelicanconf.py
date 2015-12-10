@@ -91,7 +91,6 @@ LINKS = ()
 SOCIAL = (('Github', 'https://github.com/JP-Ellis'),
           ('Email', 'mailto:coujellis@gmail.com'),
           ('LinkedIn', 'https://au.linkedin.com/in/joshuapellis'),
-          # ('GooglePlus', 'https://plus.google.com/u/0/+JoshuaEllisP'),
 )
 
 # Defaults
