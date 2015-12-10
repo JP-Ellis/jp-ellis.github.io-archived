@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} &ndash; {% endblock %}
+
+{% block content %}
+<article>
+  <header>
+    <h1 id="{{ page.slug }}">{{ page.title }}</h1>
+  </header>
+  <div>
+    {{ page.content }}
+  </div>
+</article>
+
+{% for child in page.children %}
+{% if page.slug != child.slug %}
+{% with page=child %}
+{% include "includes/page-summary.html" %}
+{% endwith %}
+{% endif %}
+{% endfor %}
+{% endblock %}

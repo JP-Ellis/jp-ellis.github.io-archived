@@ -1,0 +1,16 @@
+<article>
+  <header>
+    <h2><a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a></h2>
+    <div class="article-info">
+      {% if DISQUS_SITENAME %}
+      <span class="article-comment">
+        <a href="{{ SITEBASE }}/{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.slug }}">Leave a comment</a>
+      </span>
+      {% endif %}
+    </div>
+  </header>
+  <div class="summary">
+    {{ page.summary }}
+  </div>
+  <a class="continue-reading" href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}"><button type="button" class="btn btn-primary">Continue reading</button></a>
+</article>
