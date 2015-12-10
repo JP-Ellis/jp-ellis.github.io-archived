@@ -1,3 +1,11 @@
 <nav>
-  <a class="home" href="{{ SITEURL }}">Home</a>
+  <ul class="breadcrumb">
+    <li class="home"><a href="{{ SITEURL }}">Home</a></li>
+    {% if page %}
+    {% for parent in page.parents %}
+    <li class="inter"><a href="{{ SITEURL }}/{{ parent.url }}">{{ parent.title }}</a></li>
+    {% endfor %}
+    <li class="active">{{ page.title }}</li>
+    {% endif %}
+  </ul>
 </nav>

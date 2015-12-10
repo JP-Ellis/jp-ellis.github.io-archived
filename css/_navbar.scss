@@ -6,13 +6,18 @@
     justify-content: flex-start;
     align-items: baseline;
 
-    a:first-child {
-        font-size: $font-size-h2;
+    ul {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
     }
 
     a {
-        display: inline-block;
-        margin: 0.5rem $spacer-x;
         color: white;
         &:hover {
             color: darken(white, 10%);
@@ -20,7 +25,8 @@
     }
 
     .home {
-        vertical-align: center;
+        font-size: $font-size-h2;
+        margin-left: $spacer-x;
         &::before {
             content: "";
             display: inline-block;
@@ -33,4 +39,15 @@
             background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMjB2LTZoNHY2aDV2LThoM0wxMiAzIDIgMTJoM3Y4eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=");
         }
     }
+
+    .inter, .active {
+        font-size: $font-size-h3;
+        &::before {
+            content: "»";
+            display: inline-block;
+            font-size: 1.3em;
+            margin-right: 0.5*$spacer-x;
+        }
+    }
+
 }
