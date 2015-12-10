@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<article>
+  <header>
+    <h1>{{ SITENAME }}</h1>
+  </header>
+  <div>
+    {{ FRONTMATTER }}
+  </div>
+</article>
+
 {% for article in articles_page.object_list %}
 {% include "includes/article-summary.html" %}
 {% endfor %}
