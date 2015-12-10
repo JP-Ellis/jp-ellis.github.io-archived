@@ -39,8 +39,9 @@ THEME = 'themes/jp-ellis'
 # Paths
 ################################################################################
 PATH = 'content'
-STATIC_PATHS = ['images', 'files']
-ARTICLE_PATHS = ['blog', 'projects']
+STATIC_PATHS = ['blog', 'pages']
+ARTICLE_PATHS = ['blog']
+PAGE_PATHS = ['pages']
 
 # Readjust all the paths as I prefer URLs which do not end in .html
 ########################################
@@ -93,17 +94,22 @@ SOCIAL = (('Github', 'https://github.com/JP-Ellis'),
           # ('GooglePlus', 'https://plus.google.com/u/0/+JoshuaEllisP'),
 )
 
-# Site Settings
+# Defaults
 ################################################################################
 DEFAULT_PAGINATION = 5
 DEFAULT_METADATA = {
     'status': 'draft',
 }
 
+# Jinja Settings
+################################################################################
+JINJA_EXTENSIONS = ['jinja2.ext.with_']
+
 # Plugins
 ################################################################################
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
+    'page_hierarchy',
     'render_math',
     'sitemap',
 ]

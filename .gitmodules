@@ -5,3 +5,10 @@
 	path = output
 	url = git@github.com:JP-Ellis/jp-ellis.github.io.git
 	branch = master
+[submodule "plugins/page_hierarchy"]
+	path = plugins/page_hierarchy
+	url = git@github.com:akhayyat/pelican-page-hierarchy.git
+[submodule "content/pages/projects/tikz-feynman"]
+	path = content/pages/projects/tikz-feynman
+	url = git@github.com:JP-Ellis/tikz-feynman.git
+	branch = gh-pages
