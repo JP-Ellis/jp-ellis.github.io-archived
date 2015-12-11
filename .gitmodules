@@ -12,3 +12,7 @@
 	path = content/pages/projects/tikz-feynman
 	url = git@github.com:JP-Ellis/tikz-feynman.git
 	branch = gh-pages
+[submodule "content/pages/projects/simpler-wick"]
+	path = content/pages/projects/simpler-wick
+	url = git@github.com:JP-Ellis/simpler-wick.git
+	branch = gh-pages
