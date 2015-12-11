@@ -5,21 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jp-ellis.github.io/</loc>
-<lastmod>2015-12-10T17:10:01-00:00</lastmod>
+<lastmod>2015-12-11T15:06:11-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
 <loc>https://jp-ellis.github.io/archives.html</loc>
-<lastmod>2015-12-10T17:10:01-00:00</lastmod>
+<lastmod>2015-12-11T15:06:11-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
 <loc>https://jp-ellis.github.io/about/</loc>
-<lastmod>2015-12-10T17:10:01-00:00</lastmod>
+<lastmod>2015-12-11T15:06:11-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.0</priority>
+</url>
+
+<url>
+<loc>https://jp-ellis.github.io/projects/simpler-wick/simpler-wick/</loc>
+<lastmod>2015-12-11T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
@@ -33,7 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jp-ellis.github.io/projects/</loc>
-<lastmod>2015-12-10T17:10:01-00:00</lastmod>
+<lastmod>2015-12-11T15:06:11-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.0</priority>
+</url>
+
+<url>
+<loc>https://jp-ellis.github.io/projects/simpler-wick/</loc>
+<lastmod>2015-12-11T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
