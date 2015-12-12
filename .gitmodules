@@ -16,3 +16,7 @@
 	path = content/pages/projects/simpler-wick
 	url = git@github.com:JP-Ellis/simpler-wick.git
 	branch = gh-pages
+[submodule "content/pages/projects/rust-skiplist"]
+	path = content/pages/projects/rust-skiplist
+	url = git@github.com:JP-Ellis/rust-skiplist.git
+	branch = pages
