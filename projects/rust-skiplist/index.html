@@ -7,7 +7,7 @@
     <meta name="robots" content=""/>
 
     <!-- Metadata -->
-    <title>Projects &ndash; Joshua Ellis's Blog</title>
+    <title>Rust-Skiplist &ndash; Joshua Ellis's Blog</title>
     <meta name="author" content="Joshua Ellis">
     <meta name="description" content="Blog of young physicist Joshua Ellis">
     <meta property="image" content="">
@@ -57,74 +57,60 @@
       <nav>
         <ul class="breadcrumb">
           <li class="home"><a href="https://jp-ellis.github.io">Home</a></li>
-<li class="active">Projects</li>
+<li class="inter"><a href="https://jp-ellis.github.io/projects/">Projects</a></li>
+<li class="active">Rust-Skiplist</li>
         </ul>
       </nav>
       <main>
 <article>
   <header>
-    <h1 id="projects">Projects</h1>
+    <h1 id="rust-skiplist">Rust-Skiplist</h1>
+    <share-button class="btn btn-primary"></share-button>
+    <script>new ShareButton({ui: {flyout: "top left"}, networks: {pinterest: {enabled: false}}});</script>
+    <div class="github">
+      <a href="https://github.com/JP-Ellis/rust-skiplist/"><span class="btn btn-primary">Github</span></a>
+      <a href="https://github.com/JP-Ellis/rust-skiplist/releases/latest"><span class="btn btn-primary">Download</span></a>
+    </div>
   </header>
   <div>
-    <p>In my spare time, or more often when I am avoiding doing some other work, I
-often start small projects on the side.  My biggest project so far has been
-<a class="reference external" href="https://jp-ellis.github.io/projects/tikz-feynman/">TikZ-Feynman</a>.</p>
+    <p>A skiplist is a way of storing elements in such a way that elements can be
+efficiently accessed, inserted and removed, all in \(O(\log(n))\) on average.
+Rust-SkipList is an implementation of skiplists inside <a class="reference external" href="https://www.rust-lang.org/">Rust</a>.</p>
+<p>Conceptually, a skiplist resembles something like:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>&lt;head&gt; ----------&gt; [2] --------------------------------------------------&gt; [9] ----------&gt;
+&lt;head&gt; ----------&gt; [2] ------------------------------------[7] ----------&gt; [9] ----------&gt;
+&lt;head&gt; ----------&gt; [2] ----------&gt; [4] ------------------&gt; [7] ----------&gt; [9] --&gt; [10] -&gt;
+&lt;head&gt; --&gt; [1] --&gt; [2] --&gt; [3] --&gt; [4] --&gt; [5] --&gt; [6] --&gt; [7] --&gt; [8] --&gt; [9] --&gt; [10] -&gt;
+</pre></div>
+</td></tr></table><p>where we each node <tt class="docutils literal">[x]</tt> has references to nodes further down the list,
+allowing the algorithm to effectively skip ahead.</p>
+<p>When accessing elements, the algorithm begins with the head node on the first
+(top-most) level and moves as far right without exceeding the element desired.
+The algorithm then moves down a level and repeats the process until it finds the
+desired node.</p>
+<p>The bottom-most level is simply a linked list (i.e. each link always goes to the
+next node in the list), and each level up, the links become progressively longer
+skipping more and more elements.  The height of each node is determined
+randomly; typically with a geometric distribution with \(p = 0.5\).  This way
+the number of nodes of height \(n\) is approximately twice the number of nodes
+of height \(n+1\) and provides a good trade-off between memory usage and
+speed.</p>
+<p>In order to use this crate, just add the following to your project's
+<tt class="docutils literal">Cargo.toml</tt>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>[dependencies]
+
+skiplist = &quot;*&quot;
+</pre></div>
+</td></tr></table><p>and the documentation can be accessed <a class="reference external" href="https://jp-ellis.github.io/rust-skiplist/skiplist/">here</a>.</p>
 
   </div>
 </article>
-<article>
-  <header>
-    <h2><a href="https://jp-ellis.github.io/projects/rust-skiplist/#rust-skiplist">Rust-Skiplist</a></h2>
-    <div class="article-info">
-      <span class="article-comment">
-        <a href="/projects/rust-skiplist/#disqus_thread" data-disqus-identifier="rust-skiplist">Leave a comment</a>
-      </span>
-    </div>
-  </header>
-  <div class="summary">
-    <p class="first last">A skiplist is a way of storing elements in such a way that elements
-can be efficiently accessed, inserted and removed, all in
-\(O(\log(n))\) on average. Rust-SkipList is an implementation of
-skiplists inside <a class="reference external" href="https://www.rust-lang.org/">Rust</a>.</p>
-
-  </div>
-  <a class="continue-reading" href="https://jp-ellis.github.io/projects/rust-skiplist/#rust-skiplist"><button type="button" class="btn btn-primary">Continue reading</button></a>
-</article><article>
-  <header>
-    <h2><a href="https://jp-ellis.github.io/projects/simpler-wick/#simpler-wick">Simpler-Wick</a></h2>
-    <div class="article-info">
-      <span class="article-comment">
-        <a href="/projects/simpler-wick/#disqus_thread" data-disqus-identifier="simpler-wick">Leave a comment</a>
-      </span>
-    </div>
-  </header>
-  <div class="summary">
-    <p>In every quantum field theory course, there will be a chapter that <a class="reference external" href="https://en.wikipedia.org/wiki/Wick%27s_theorem">Wicks
-theorem</a> and how it can be
-used to convert a very large product of many creation and annihilation operators
-into something more tractable and <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_order">normal ordered</a>.</p>
-<p>The contraction are denoted with a square bracket over the operators ...</p>
-  </div>
-  <a class="continue-reading" href="https://jp-ellis.github.io/projects/simpler-wick/#simpler-wick"><button type="button" class="btn btn-primary">Continue reading</button></a>
-</article><article>
-  <header>
-    <h2><a href="https://jp-ellis.github.io/projects/tikz-feynman/#tikz-feynman">TikZ-Feynman</a></h2>
-    <div class="article-info">
-      <span class="article-comment">
-        <a href="/projects/tikz-feynman/#disqus_thread" data-disqus-identifier="tikz-feynman">Leave a comment</a>
-      </span>
-    </div>
-  </header>
-  <div class="summary">
-    <p><a class="reference external" href="http://ctan.org/pkg/pgf">Ti<em>k</em>Z</a> is a fantastic and very powerful drawing package and Ti<em>k</em>Z-Feynman
-builds upon this to provide an easy way to produce <a class="reference external" href="https://en.wikipedia.org/wiki/Feynman_diagram">Feynman diagrams</a> directly inside LaTeX.</p>
-<p>I must thank <a class="reference external" href="http://tex.stackexchange.com/users/2552">Jake</a> for providing
-<a class="reference external" href="http://tex.stackexchange.com/a/87395/26980">this answer</a> on <a class="reference external" href="http://tex.stackexchange.com/">tex.se</a> which initially inspired me to write this
-package.</p>
-<p>If ...</p>
-  </div>
-  <a class="continue-reading" href="https://jp-ellis.github.io/projects/tikz-feynman/#tikz-feynman"><button type="button" class="btn btn-primary">Continue reading</button></a>
-</article>      </main>
+      </main>
       <footer>
 <p>
   <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
