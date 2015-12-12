@@ -3,6 +3,10 @@ share-button {
     background-color: $brand-primary;
     margin-left: auto;
     margin-bottom: auto;
+    font-family: $font-family-sans-serif;
+    padding: $btn-padding-y $btn-padding-x;
+    padding-left: 1rem + 0.3rem + $btn-padding-x;
+    text-transform: none;
 
     &:hover {
         color: white;
@@ -11,5 +15,15 @@ share-button {
 
     &:before {
         top: 8px;
+        left: 1rem;
     }
+
+    &.btn {
+        padding-left: 2rem + $btn-padding-y;
+        font-weight: 800;
+    }
+}
+
+.github {
+    margin-left: 0.5ex;
 }

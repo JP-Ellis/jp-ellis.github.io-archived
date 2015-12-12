@@ -1,6 +1,10 @@
 <article>
   <header>
     <h1 id="{{ page.slug }}">{{ page.title }}</h1>
+    {% if page.share %}
+    <share-button class="btn btn-primary"></share-button>
+    <script>new ShareButton({ui: {flyout: "top left"}, networks: {pinterest: {enabled: false}}});</script>
+    {% endif %}
     {% if page.github %}
     <div class="github">
       <a href="{{ page.github }}"><span class="btn btn-primary">Github</span></a>
