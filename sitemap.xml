@@ -4,98 +4,98 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://jp-ellis.github.io/</loc>
-<lastmod>2015-12-18T00:14:44-00:00</lastmod>
+<loc>http://jpellis.me/</loc>
+<lastmod>2015-12-18T00:57:28-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/archives.html</loc>
-<lastmod>2015-12-18T00:14:44-00:00</lastmod>
+<loc>http://jpellis.me/archives.html</loc>
+<lastmod>2015-12-18T00:57:28-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/about/</loc>
-<lastmod>2015-12-18T00:14:44-00:00</lastmod>
+<loc>http://jpellis.me/about/</loc>
+<lastmod>2015-12-18T00:57:28-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/rust-skiplist/rust-skiplist/</loc>
+<loc>http://jpellis.me/projects/rust-skiplist/rust-skiplist/</loc>
 <lastmod>2015-12-12T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/simpler-wick/simpler-wick/</loc>
+<loc>http://jpellis.me/projects/simpler-wick/simpler-wick/</loc>
 <lastmod>2015-12-11T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/tikz-feynman/tikz-feynman/</loc>
+<loc>http://jpellis.me/projects/tikz-feynman/tikz-feynman/</loc>
 <lastmod>2015-12-09T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/</loc>
-<lastmod>2015-12-18T00:14:44-00:00</lastmod>
+<loc>http://jpellis.me/projects/</loc>
+<lastmod>2015-12-18T00:57:28-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/rust-skiplist/</loc>
+<loc>http://jpellis.me/projects/rust-skiplist/</loc>
 <lastmod>2015-12-12T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/simpler-wick/</loc>
+<loc>http://jpellis.me/projects/simpler-wick/</loc>
 <lastmod>2015-12-11T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/projects/tikz-feynman/</loc>
+<loc>http://jpellis.me/projects/tikz-feynman/</loc>
 <lastmod>2015-12-09T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/2015/12/git-hooks/</loc>
+<loc>http://jpellis.me/2015/12/git-hooks/</loc>
 <lastmod>2015-12-08T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/category/blog/</loc>
+<loc>http://jpellis.me/category/blog/</loc>
 <lastmod>2015-12-08T00:00:00+09:40</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/tag/git/</loc>
+<loc>http://jpellis.me/tag/git/</loc>
 <lastmod>2015-12-08T00:00:00+09:40</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://jp-ellis.github.io/author/joshua-ellis/</loc>
+<loc>http://jpellis.me/author/joshua-ellis/</loc>
 <lastmod>2015-12-08T00:00:00+09:40</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
