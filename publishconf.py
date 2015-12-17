@@ -12,15 +12,16 @@ from pelicanconf import *
 
 PUBLISH = True
 
-SITEURL = 'https://jp-ellis.github.io'
+SITEURL = 'http://jpellis.me'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [
     ".git",
     ".gitignore",
-    "CNAME"
+    "CNAME",
     "google7e93ca521c7ff343.html",
+    "googleca17b845931f3580.html",
     "googleca17b845931f3580.html",
 ]
 

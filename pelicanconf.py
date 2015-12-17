@@ -89,7 +89,7 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/JP-Ellis'),
-          ('Email', 'mailto:coujellis@gmail.com'),
+          ('Email', 'mailto:josh@jpellis.me'),
           ('LinkedIn', 'https://au.linkedin.com/in/joshuapellis'),
 )
 
