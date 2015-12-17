@@ -16,7 +16,7 @@ SITEURL = 'https://jp-ellis.github.io'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = [".git", ".gitignore", "google7e93ca521c7ff343.html"]
+OUTPUT_RETENTION = [".git", ".gitignore", "google7e93ca521c7ff343.html", "CNAME"]
 
 # Services
 ################################################################################
