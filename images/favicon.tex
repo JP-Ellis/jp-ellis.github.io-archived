@@ -8,13 +8,25 @@
   }
 }]{standalone}
 
+\usepackage{fontspec}        % Allows other fonts to be specified
+\setmainfont{EB Garamond}[
+  Contextuals={Alternate},
+  Ligatures={Rare,Historic},
+  Numbers=OldStyle,
+  % CharacterVariant={1},    % historical s
+  CharacterVariant={4},    % &
+  CharacterVariant={5:3},  % v
+  % CharacterVariant={27},   % g
+]
+
+\usepackage{tikz}
+\usepackage{xcolor}
+
 \begin{document}
+\color[HTML]{D43400}
 \begin{tikzpicture}[x=1pt, y=1pt, line width=3]
   \useasboundingbox (-16, -16) -- (16, 16);
-  \draw (-7, -7) circle [radius=6];
-  \draw (-13, -7) -- (-13, 8);
-  \foreach \radius in {13, 20} {
-    \draw (-7 + \radius, -7) arc [start angle=0, end angle=100, radius=\radius];
-};
+  \node at (-2, 3) {\Huge JP};
+  \node at (8, -5) {\Huge E};
 \end{tikzpicture}
 \end{document}

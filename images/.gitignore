@@ -1,0 +1,9 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.fls
+*.log
+*.synctex.gz
+/auto/
+*.pdf
+/favicon-*.png
