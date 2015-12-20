@@ -10,6 +10,7 @@
         margin: 0;
         list-style-type: none;
         padding: 0;
+        padding-left: $spacer-x;
 
         li {
             display: inline-block;
@@ -26,7 +27,6 @@
 
     .home {
         font-size: $font-size-h2;
-        margin-left: $spacer-x;
         &::before {
             content: "";
             display: inline-block;
