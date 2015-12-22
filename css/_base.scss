@@ -3,6 +3,8 @@ html, body {
 }
 
 body {
+    background-color: $gray-lighter;
+
     > .content {
         height: 100%;
         display: flex;

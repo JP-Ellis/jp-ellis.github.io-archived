@@ -5,7 +5,7 @@ article {
     margin-bottom: $spacer-y;
     padding: 0.5 * $spacer;
     border: $gray;
-    background: $gray-lightest;
+    background: white;
     @include shadow(1);
 
     @media screen and (min-width: map_get($grid-breakpoints, md)) {
