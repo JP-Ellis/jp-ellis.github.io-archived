@@ -13,6 +13,8 @@ tt {
 code {
     padding: .2rem .4rem;
     font-size: 90%;
+    color: $code-color;
+    background-color: $code-bg;
     @include border-radius($border-radius);
     @include pygments-solarized(light);
 }
@@ -24,12 +26,12 @@ kbd {
     color: $kbd-color;
     background-color: $kbd-bg;
     @include border-radius($border-radius-sm);
-    @include box-shadow(inset 0 -.1rem 0 rgba(0,0,0,.25));
+    @include box-shadow($kbd-box-shadow);
 
     kbd {
         padding: 0;
         font-size: 100%;
-        font-weight: bold;
+        font-weight: $nested-kbd-font-weight;
         @include box-shadow(none);
     }
 }
@@ -37,10 +39,11 @@ kbd {
 // Blocks of code
 :not(.highlight) > pre {
     display: block;
-    font-size: 90%;
-    margin: 0;
+    margin-top: 0;
     margin-bottom: $spacer-y;
+    font-size: 90%;
     line-height: $line-height;
+    color: $pre-color;
     max-height: $pre-scrollable-max-height;
     overflow-y: scroll;
     @include pygments-solarized(dark);
@@ -59,11 +62,13 @@ kbd {
 ////////////////////////////////////////////////////////////////////////////////
 // Highlight Table
 .highlighttable {
-    width: 100%;
     display: block;
-    font-size: 90%;
     margin-bottom: $spacer-y;
+    font-size: 90%;
     line-height: $line-height;
+    color: $pre-color;
+    color: white;
+    width: 100%;
     max-height: $pre-scrollable-max-height;
     overflow-y: scroll;
     overflow-x: auto;
@@ -83,6 +88,7 @@ kbd {
         text-align: right;
         pre {
             background-color: inherit;
+            max-height: none;
         }
     }
 
@@ -95,13 +101,6 @@ kbd {
         overflow: hidden;
         margin-bottom: 0;
         font-size: 90%;
-
-        code {
-            padding: 0;
-            font-size: inherit;
-            color: inherit;
-            background-color: transparent;
-            border-radius: 0;
-        }
+        color: inherit;
     }
 }
