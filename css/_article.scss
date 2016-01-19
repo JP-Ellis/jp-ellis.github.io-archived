@@ -47,4 +47,16 @@ article {
         display: flex;
         margin-left: auto;
     }
+
+    & > div {
+        img {
+            display: block;
+            margin: 1em 0;
+
+            &.align-center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
 }
