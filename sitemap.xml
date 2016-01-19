@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.jpellis.me/</loc>
-<lastmod>2015-12-23T00:45:41-00:00</lastmod>
+<lastmod>2016-01-20T02:12:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
 <loc>http://www.jpellis.me/archives.html</loc>
-<lastmod>2015-12-23T00:45:41-00:00</lastmod>
+<lastmod>2016-01-20T02:12:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 
 <url>
 <loc>http://www.jpellis.me/about/</loc>
-<lastmod>2015-12-23T00:45:41-00:00</lastmod>
+<lastmod>2016-01-20T02:12:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
@@ -40,14 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/</loc>
-<lastmod>2015-12-09T00:00:00+11:00</lastmod>
+<lastmod>2015-01-19T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
 
 <url>
 <loc>http://www.jpellis.me/projects/</loc>
-<lastmod>2015-12-23T00:45:41-00:00</lastmod>
+<lastmod>2016-01-20T02:12:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>
@@ -68,7 +68,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.jpellis.me/projects/tikz-feynman/</loc>
-<lastmod>2015-12-09T00:00:00+11:00</lastmod>
+<lastmod>2015-01-19T00:00:00+11:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.0</priority>
 </url>

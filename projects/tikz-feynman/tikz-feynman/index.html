@@ -74,17 +74,126 @@
     </div>
   </header>
   <div>
-    <p><a class="reference external" href="http://ctan.org/pkg/pgf">Ti<em>k</em>Z</a> is a fantastic and very powerful drawing package and Ti<em>k</em>Z-Feynman
-builds upon this to provide an easy way to produce <a class="reference external" href="https://en.wikipedia.org/wiki/Feynman_diagram">Feynman diagrams</a> directly inside LaTeX.</p>
-<p>I must thank <a class="reference external" href="http://tex.stackexchange.com/users/2552">Jake</a> for providing
-<a class="reference external" href="http://tex.stackexchange.com/a/87395/26980">this answer</a> on <a class="reference external" href="http://tex.stackexchange.com/">tex.se</a> which initially inspired me to write this
-package.</p>
-<p>If you have any suggestions or have found any bugs, please feel free to create a
-<a class="reference external" href="https://github.com/JP-Ellis/tikz-feynman/issues">new issue</a> or pull request
-on <a class="reference external" href="https://github.com/JP-Ellis/tikz-feynman">Github page</a>.</p>
-<p>All the documentation can be found in
-<a class="reference external" href="http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/tikz-feynman.pdf">tikz-feynman.pdf</a>.</p>
+    <p>Ti<em>k</em>Z-Feynman is a LaTeX package allowing Feynman diagrams to be easily
+generated within LaTeX with minimal user instructions and without the need of
+external programs.  It builds upon the <a class="reference external" href="https://ctan.org/pkg/pgf">Ti<em>k</em>Z</a> package and leverages the graph
+placement algorithms from Ti<em>k</em>Z in order to automate the placement of many
+vertices.  Ti<em>k</em>Z-Feynman still allows fine-tuned placement of vertices so that
+even complex diagrams can still be generated with ease.</p>
+<p>Ti<em>k</em>Z-Feynman is made available through the <a class="reference external" href="https://ctan.org/pkg/tikz-feynman">Comprehensive TeX Archive Network
+(CTAN)</a> and comes with some thorough
+<a class="reference external" href="http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/tikz-feynman.pdf">documentation</a>
+containing a tutorial and many examples.</p>
+<p>Ti<em>k</em>Z-Feynman is open source and contribution are welcome.  If you have any
+suggestions, feature requests, or have found any bugs, feel free to create a new
+issue or pull request on <a class="reference external" href="https://github.com/JP-Ellis/tikz-feynman">Github</a>.</p>
+<p>Below are a few example to demonstrate how easy diagram can be, and how
+extensible it can be.  Many more are given in the
+<a class="reference external" href="http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/tikz-feynman.pdf">documentation</a>:</p>
+<img alt="QED Example" class="align-center" src="http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/images/qed.png" style="width: 300px;" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\feynmandiagram</span> [horizontal=a to b] <span class="nb">{</span>
+  i1 -- [fermion] a -- [fermion] i2,
+  a -- [photon] b,
+  f1 -- [fermion] b -- [fermion] f2,
+<span class="nb">}</span>;
+</pre></div>
+</td></tr></table><img alt="Penguin Example" class="align-center" src="http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/images/penguin.png" style="width: 300px;" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\feynmandiagram</span> [large, vertical=e to f] <span class="nb">{</span>
+  a -- [fermion] b -- [photon, momentum=<span class="s">\(</span><span class="nb">k</span><span class="s">\)</span>] c -- [fermion] d,
+  b -- [fermion, momentum&#39;=<span class="s">\(</span><span class="nb">p_{</span><span class="m">1</span><span class="nb">}</span><span class="s">\)</span>] e -- [fermion, momentum&#39;=<span class="s">\(</span><span class="nb">p_{</span><span class="m">2</span><span class="nb">}</span><span class="s">\)</span>] c,
+  e -- [gluon]  f,
+  h -- [fermion] f -- [fermion] i;
+<span class="nb">}</span>;
+</pre></div>
+</td></tr></table><img alt="Mixing Example" class="align-center" src="http://www.jpellis.me/projects/tikz-feynman/tikz-feynman/images/mixing.png" style="width: 490px;" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+  <span class="k">\begin</span><span class="nb">{</span>feynman<span class="nb">}</span>
+    <span class="k">\vertex</span> (a1) <span class="nb">{</span><span class="s">\(</span><span class="nv">\overline</span><span class="nb"> b</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\vertex</span><span class="na">[right=1cm of a1]</span> (a2);
+    <span class="k">\vertex</span><span class="na">[right=1cm of a2]</span> (a3);
+    <span class="k">\vertex</span><span class="na">[right=1cm of a3]</span> (a4) <span class="nb">{</span><span class="s">\(</span><span class="nb">b</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\vertex</span><span class="na">[right=1cm of a4]</span> (a5);
+    <span class="k">\vertex</span><span class="na">[right=2cm of a5]</span> (a6) <span class="nb">{</span><span class="s">\(</span><span class="nb">u</span><span class="s">\)</span><span class="nb">}</span>;
 
+    <span class="k">\vertex</span><span class="na">[below=2em of a1]</span> (b1) <span class="nb">{</span><span class="s">\(</span><span class="nb">d</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\vertex</span><span class="na">[right=1cm of b1]</span> (b2);
+    <span class="k">\vertex</span><span class="na">[right=1cm of b2]</span> (b3);
+    <span class="k">\vertex</span><span class="na">[right=1cm of b3]</span> (b4) <span class="nb">{</span><span class="s">\(</span><span class="nv">\overline</span><span class="nb"> d</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\vertex</span><span class="na">[below=2em of a6]</span> (b5) <span class="nb">{</span><span class="s">\(</span><span class="nv">\overline</span><span class="nb"> d</span><span class="s">\)</span><span class="nb">}</span>;
+
+    <span class="k">\vertex</span><span class="na">[above=of a6]</span> (c1) <span class="nb">{</span><span class="s">\(</span><span class="nv">\overline</span><span class="nb"> u</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\vertex</span><span class="na">[above=2em of c1]</span> (c3) <span class="nb">{</span><span class="s">\(</span><span class="nb">d</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\vertex</span> at (<span class="s">$</span><span class="o">(</span><span class="nb">c</span><span class="m">1</span><span class="o">)!</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">!(</span><span class="nb">c</span><span class="m">3</span><span class="o">)</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="o">(</span><span class="m">1</span><span class="nb">cm, </span><span class="m">0</span><span class="o">)</span><span class="s">$</span>) (c2);
+
+    <span class="k">\diagram*</span> <span class="nb">{</span>
+      <span class="nb">{</span>[edges=fermion]
+        (b1) -- (b2) -- (a2) -- (a1),
+        (b5) -- (b4) -- (b3) -- (a3) -- (a4) -- (a5) -- (a6),
+      <span class="nb">}</span>,
+      (a2) -- [boson, edge label=<span class="s">\(</span><span class="nb">W</span><span class="s">\)</span>] (a3),
+      (b2) -- [boson, edge label&#39;=<span class="s">\(</span><span class="nb">W</span><span class="s">\)</span>] (b3),
+
+      (c1) -- [fermion, out=180, in=-45] (c2) -- [fermion, out=45, in=180] (c3),
+      (a5) -- [boson, bend left, edge label=<span class="s">\(</span><span class="nb">W^{</span><span class="o">-</span><span class="nb">}</span><span class="s">\)</span>] (c2),
+    <span class="nb">}</span>;
+
+    <span class="k">\draw</span> [decoration=<span class="nb">{</span>brace<span class="nb">}</span>, decorate] (b1.south west) -- (a1.north west)
+          node [pos=0.5, left] <span class="nb">{</span><span class="s">\(</span><span class="nb">B^{</span><span class="m">0</span><span class="nb">}</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\draw</span> [decoration=<span class="nb">{</span>brace<span class="nb">}</span>, decorate] (c3.north east) -- (c1.south east)
+          node [pos=0.5, right] <span class="nb">{</span><span class="s">\(</span><span class="nv">\pi</span><span class="nb">^{</span><span class="o">-</span><span class="nb">}</span><span class="s">\)</span><span class="nb">}</span>;
+    <span class="k">\draw</span> [decoration=<span class="nb">{</span>brace<span class="nb">}</span>, decorate] (a6.north east) -- (b5.south east)
+          node [pos=0.5, right] <span class="nb">{</span><span class="s">\(</span><span class="nv">\pi</span><span class="nb">^{</span><span class="o">+</span><span class="nb">}</span><span class="s">\)</span><span class="nb">}</span>;
+  <span class="k">\end</span><span class="nb">{</span>feynman<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</td></tr></table>
   </div>
 </article>
       </main>
