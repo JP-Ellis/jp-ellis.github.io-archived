@@ -1,22 +1,22 @@
 [submodule "plugins/pelican-plugins"]
 	path = plugins/pelican-plugins
-	url = git@github.com:getpelican/pelican-plugins.git
+	url = https://github.com/getpelican/pelican-plugins.git
 [submodule "output"]
 	path = output
-	url = git@github.com:JP-Ellis/jp-ellis.github.io.git
+	url = https://github.com/JP-Ellis/jp-ellis.github.io.git
 	branch = master
 [submodule "plugins/page_hierarchy"]
 	path = plugins/page_hierarchy
-	url = git@github.com:akhayyat/pelican-page-hierarchy.git
+	url = https://github.com/akhayyat/pelican-page-hierarchy.git
 [submodule "content/pages/projects/tikz-feynman"]
 	path = content/pages/projects/tikz-feynman
-	url = git@github.com:JP-Ellis/tikz-feynman.git
+	url = https://github.com/JP-Ellis/tikz-feynman.git
 	branch = gh-pages
 [submodule "content/pages/projects/simpler-wick"]
 	path = content/pages/projects/simpler-wick
-	url = git@github.com:JP-Ellis/simpler-wick.git
+	url = https://github.com/JP-Ellis/simpler-wick.git
 	branch = gh-pages
 [submodule "content/pages/projects/rust-skiplist"]
 	path = content/pages/projects/rust-skiplist
-	url = git@github.com:JP-Ellis/rust-skiplist.git
+	url = https://github.com/JP-Ellis/rust-skiplist.git
 	branch = pages
