@@ -11,7 +11,7 @@
 {% block content %}
 {% include "includes/page.html" %}
 
-{% for child in page.children %}
+{% for child in page.children|sort(attribute='date')|sort(attribute='sort') %}
 {% if page.slug != child.slug %}
 {% with page=child %}
 {% include "includes/page-summary.html" %}
