@@ -7,7 +7,7 @@ PUBLISH = False
 # Site Information
 ################################################################################
 AUTHOR = 'Joshua Ellis'
-SITENAME = "Joshua Ellis's Blog"
+SITENAME = "Joshua Ellis"
 SITETITLE = "Joshua Ellis"
 SITESUBTITLE = "Masters of Physics Candidate"
 SITEDESCRIPTION = "Blog of young physicist Joshua Ellis"
@@ -20,16 +20,29 @@ FAVICON = ''
 CC_LICENSE = {'name': 'Attribution-ShareAlike', 'slug': "by-sa", 'version': "4.0"}
 
 FRONTMATTER = """
-
-<p>Welcome to my blog!  My name's Joshua Ellis and I am a physics masters
-candidate at <a href="https://unimelb.edu.au">The University of Melbourne</a>.
+<p>
+My name is Joshua Ellis and I am a physics masters candidate at <a
+href="https://unimelb.edu.au">The University of Melbourne</a>.  I am currently
+completing my second year of masters and doing research in the theoretical
+particle physics groups.
 </p>
 
-<p>I intend to collect various things I learn in this blog, sometimes for my own
-record keeping purposes, and sometimes because it might be useful to someone
-else out there.  Feel free to share what you like, and I'd love to hear your
-feedback.</p>
+<p>
+In addition to physics, I also enjoy coding.  I have done a fair bit of coding
+in C, C++, <a href="https://www.rust-lang.org">Rust</a>, Python and TeX/LaTeX.
+You can see some of the coding projects I have worked in over in the <a
+href="http://www.jpellis.me/projects/">projects section</a> of this website.
+</p>
 
+<p>
+This website will also contain a few blog posts which I intend to write when I
+have some spare time.  At the present stage, I intend to write posts on whatever
+I find interesting, whether it be in physics or some other interest of mine.
+</p>
+
+<p>
+Feel free to share what you like and I'd love to hear from you.
+</p>
 """
 
 # Theme
@@ -111,6 +124,7 @@ PLUGINS = [
     'page_hierarchy',
     'render_math',
     'sitemap',
+    'summary',
 ]
 
 # Sitemap
