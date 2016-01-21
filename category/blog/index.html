@@ -7,13 +7,13 @@
     <meta name="robots" content=""/>
 
     <!-- Metadata -->
-    <title>Category blog &ndash; Joshua Ellis's Blog</title>
+    <title>Category blog &ndash; Joshua Ellis</title>
     <meta name="author" content="Joshua Ellis">
     <meta name="description" content="Blog of young physicist Joshua Ellis">
     <meta property="image" content="">
 <meta property="og:type" content="blog"/>
-<meta property="og:site_name" content="Joshua Ellis's Blog"/>
-<meta property="og:title" content="Joshua Ellis's Blog"/>
+<meta property="og:site_name" content="Joshua Ellis"/>
+<meta property="og:title" content="Joshua Ellis"/>
 <meta property="og:description" content="Blog of young physicist Joshua Ellis"/>
 <meta property="og:url" content="http://www.jpellis.me"/>
 <meta property="og:locale" content="en_AU"/>
@@ -29,7 +29,7 @@
 <!-- Share button -->
 <link rel="stylesheet" type="text/css" href="http://www.jpellis.me/theme/css/share-button.min.css">
 <script type="text/javascript" src="http://www.jpellis.me/theme/js/share-button.min.js"></script><!-- Feeds -->
-<link href="http://www.jpellis.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joshua Ellis's Blog Atom">
+<link href="http://www.jpellis.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joshua Ellis Atom">
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>  </head>
   <body unresolved>
     <aside>
@@ -76,11 +76,17 @@
     </div>
   </header>
   <div class="summary">
-    <p>This blog is generated using <a class="reference external" href="http://getpelican.com/">Pelican</a> which is based on <a class="reference external" href="https://python.org/">Python</a>, and in order to
-manage the differences between source code and the generated code, I use <a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git
-hooks</a>.  I have it
-setup so that whenever I run <tt class="docutils literal">git push</tt>, all the HTML files are regenerated
-and a new commit ...</p>
+    <p>Git is a powerful version control system which has become the <em>de facto</em>
+standard in recent years (judging by the popularity of <a class="reference external" href="https://www.github.com/">Github</a>).  Perhaps one of Git's underused features is its
+<a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">hooks</a>: small scripts that are run whenever a specific action is run.  For
+example, one could set up a <em>pre-push</em> hook that runs the test suite so that
+breaking changes aren't inadvertently introduced.  Another common use for hooks
+is to deploy changes.  For example, one could have a server hosting a basic
+<a class="reference external" href="https://jekyllrb.com/">Jekyll</a> or <a class="reference external" href="http://getpelican.com/">Pelican</a> blog and using the <em>post-update</em> hook one could get the
+server to automatically regenerate the website whenever changes are pushed onto
+the server.  Since Git hooks allow <em>any</em> script to be executed, hooks can be
+used to automate nearly any task.</p>
+
   </div>
   <a class="continue-reading" href="http://www.jpellis.me/2015/12/git-hooks/#git-hooks"><button type="button" class="btn btn-primary">Continue reading</button></a>
 </article>
@@ -117,7 +123,7 @@ and a new commit ...</p>
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " Joshua Ellis's Blog ",
+  "name": " Joshua Ellis ",
   "url" : "http://www.jpellis.me",
   "image": "",
   "description": "Blog of young physicist Joshua Ellis"

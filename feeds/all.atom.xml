@@ -1,83 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Joshua Ellis's Blog</title><link href="http://www.jpellis.me/" rel="alternate"></link><link href="http://www.jpellis.me/feeds/all.atom.xml" rel="self"></link><id>http://www.jpellis.me/</id><updated>2015-12-08T00:00:00+11:00</updated><entry><title>Git Hooks</title><link href="http://www.jpellis.me/2015/12/git-hooks/" rel="alternate"></link><updated>2015-12-08T00:00:00+11:00</updated><author><name>Joshua Ellis</name></author><id>tag:www.jpellis.me,2015-12-08:2015/12/git-hooks/</id><summary type="html">&lt;p&gt;This blog is generated using &lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican&lt;/a&gt; which is based on &lt;a class="reference external" href="https://python.org/"&gt;Python&lt;/a&gt;, and in order to
-manage the differences between source code and the generated code, I use &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;git
-hooks&lt;/a&gt;.  I have it
-setup so that whenever I run &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt;, all the HTML files are regenerated
-and a new commit is added and pushed in the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch (which ultimately
-becomes the HTML is this site).&lt;/p&gt;
-&lt;p&gt;The following example goes through my setup with Github Pages, though it could
-equivalently be used to push to another server, or anything else really since
-the hook is a simple bash script.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Joshua Ellis</title><link href="http://www.jpellis.me/" rel="alternate"></link><link href="http://www.jpellis.me/feeds/all.atom.xml" rel="self"></link><id>http://www.jpellis.me/</id><updated>2015-12-08T00:00:00+11:00</updated><entry><title>Git Hooks</title><link href="http://www.jpellis.me/2015/12/git-hooks/" rel="alternate"></link><updated>2015-12-08T00:00:00+11:00</updated><author><name>Joshua Ellis</name></author><id>tag:www.jpellis.me,2015-12-08:2015/12/git-hooks/</id><summary type="html">&lt;p&gt;Git is a powerful version control system which has become the &lt;em&gt;de facto&lt;/em&gt;
+standard in recent years (judging by the popularity of &lt;a class="reference external" href="https://www.github.com/"&gt;Github&lt;/a&gt;).  Perhaps one of Git's underused features is its
+&lt;a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;hooks&lt;/a&gt;: small scripts that are run whenever a specific action is run.  For
+example, one could set up a &lt;em&gt;pre-push&lt;/em&gt; hook that runs the test suite so that
+breaking changes aren't inadvertently introduced.  Another common use for hooks
+is to deploy changes.  For example, one could have a server hosting a basic
+&lt;a class="reference external" href="https://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; or &lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican&lt;/a&gt; blog and using the &lt;em&gt;post-update&lt;/em&gt; hook one could get the
+server to automatically regenerate the website whenever changes are pushed onto
+the server.  Since Git hooks allow &lt;em&gt;any&lt;/em&gt; script to be executed, hooks can be
+used to automate nearly any task.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;This website is generated using &lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican&lt;/a&gt; and is hosted with &lt;a class="reference external" href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt;.
+Github Pages allows you to host your website for free with Github, and all you
+need to do is create a repository called &lt;tt class="docutils literal"&gt;USERNAME.github.io&lt;/tt&gt; and then Github
+will automatically start serving the HTML files from the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch of
+that repository.  &lt;a class="footnote-reference" href="#fn-jekyll" id="id1"&gt;[1]&lt;/a&gt; Github Pages also allows you to have
+per-projects websites.  In this case, you need to create a branch called
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;gh-pages&lt;/span&gt;&lt;/tt&gt; in any of your current repositories and Github will then serve the
+content of that branch over at &lt;tt class="docutils literal"&gt;USERNAME.github.io/REPOSITORY&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;I first go through how my Github Pages is organized and then how I use Git hooks&lt;/p&gt;
 &lt;div class="section" id="github-pages-setup"&gt;
 &lt;h2&gt;Github Pages Setup&lt;/h2&gt;
-&lt;p&gt;I am using &lt;a class="reference external" href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; for this website which
-serves the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch from the repository called &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;jp-ellis.github.io&lt;/span&gt;&lt;/tt&gt;.
-I keep the source code in the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch which is independent to the
-&lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch (and similarly for the &lt;tt class="docutils literal"&gt;theme&lt;/tt&gt; branch tracks &lt;a class="footnote-reference" href="#theme" id="id2"&gt;[1]&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;The idea is to create separate repositories with separate branch names, and then
-afterwards push them to the same remote repository:&lt;/p&gt;
+&lt;p&gt;I have set up my &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;jp-ellis.github.io&lt;/span&gt;&lt;/tt&gt; with three branches:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;source&lt;/tt&gt; contains the original files Pelican uses in order to generate the
+website;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;master&lt;/tt&gt; contains the output generated by &lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;.  Nearly all commits
+should be automatically generated;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;theme&lt;/tt&gt; contains the theme-specific files.  This could be included within
+the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch, but I have kept it separate in case I want to load
+another theme, or if I wish to move the theme to its own repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch requires the &lt;tt class="docutils literal"&gt;theme&lt;/tt&gt; branch, it is a good idea to
+add the &lt;tt class="docutils literal"&gt;theme&lt;/tt&gt; branch as a &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules"&gt;submodule&lt;/a&gt; of &lt;tt class="docutils literal"&gt;source&lt;/tt&gt;.  This means that if you
+clone the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch into a new directory, you can also have Git clone
+submodules at once.  I have done the same with the &lt;tt class="docutils literal"&gt;master&lt;/tt&gt; branch so that in
+the end, my repository has the following structure:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3
 4
 5
-6
-7
-8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/web/jp-ellis.github.io
-&lt;span class="c"&gt;# Setup git and create a new source branch&lt;/span&gt;
-git init .
-git checkout --orphan &lt;span class="nb"&gt;source&lt;/span&gt;
-git remote add origin git@github.com:JP-Ellis/jp-ellis.github.io.git
-&lt;span class="c"&gt;# Setup the master branch&lt;/span&gt;
-git init ./output
-git remote add origin git@github.com:JP-Ellis/jp-ellis.github.io.git
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;jp-ellis.github.io/   &amp;lt;-- source branch
+├── content/
+├── output/           &amp;lt;-- master branch (submodule)
+├── themes/
+│   └── jp-ellis/     &amp;lt;-- theme branch (submodule)
+└── ...
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;At this stage, we have one repository inside the other.  We can make the parent
-directory track the smaller directory with &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules"&gt;submodules&lt;/a&gt;.  This is not strictly
-necessary in this case as the code in the parent repository doesn't rely on the
-sub-repository; however, this can be quite useful if the sub-repository is used
-as a dependency.  The submodule can be create with:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/web/jp-ellis.github.io
-git submodule add git@github.com:JP-Ellis/jp-ellis.github.io.git ./output
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;At this stage, we can make all the changes to the code and commit them as usual,
-and once ready we can commit the changes to the output and push everything.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/web/jp-ellis.github.io
-&lt;span class="c"&gt;# Make all the appropriate commits&lt;/span&gt;
-&lt;span class="c"&gt;# Push the source and set upstream&lt;/span&gt;
-git push --set-upstream origin &lt;span class="nb"&gt;source&lt;/span&gt;
-&lt;span class="nb"&gt;cd &lt;/span&gt;output
-&lt;span class="c"&gt;# Similarly, make appropriate commits and push&lt;/span&gt;
-git push --set-upstream origin master
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;At this stage, all the changes have been pushed to Github and the Github Pages
-(assuming it has been enabled in the settings) should have updated and the
-website is visible.  At this stage though, subsequent changes are annoying
-because the commands in the last block of code have to be repeated every single
-time---and knowing myself, I am bound to forget updating the output and pushing
-the changes to the generated code.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;With everything setup this way, the general procedure to update the website is:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Make the changes to the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch, commit them;&lt;/li&gt;
+&lt;li&gt;Push the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch.&lt;/li&gt;
+&lt;li&gt;Run &lt;tt class="docutils literal"&gt;make publish&lt;/tt&gt; in order to generate the content with Pelican;&lt;/li&gt;
+&lt;li&gt;Stage and commit all the changes in &lt;tt class="docutils literal"&gt;./output/&lt;/tt&gt; and push them;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Although four steps isn't all that much, steps 3 and 4 are tedious and always
+the same and lend themselves very well to being automated by using the Git
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; hook.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
-&lt;h2&gt;Git Hooks&lt;/h2&gt;
-&lt;p&gt;In order to automate the process of pushing the source, regenerating the output
-and pushing the output, I want to use &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;Git hooks&lt;/a&gt;.  Specifically, I
-will have it setup such that every time I run &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt; in the source, all
-the steps I run automatically.&lt;/p&gt;
+&lt;div class="section" id="git-pre-push-hook"&gt;
+&lt;h2&gt;Git Pre-push Hook&lt;/h2&gt;
+&lt;p&gt;In order to automate steps 3 and 4 in the above list, I will use the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; hook.  As the name suggests, this hook is executed before every
+push and if the script exits with a non-zero code, the push is aborted.  This
+could be used to make sure that breaking changes aren't pushed, or in my case,
+to make sure that generated content always follows closely the source files used
+to generate the content.&lt;/p&gt;
 &lt;p&gt;The hooks are simple executable scripts located in &lt;tt class="docutils literal"&gt;.git/hooks/&lt;/tt&gt;.  By default,
 new repositories have a few sample scripts which end in &lt;tt class="docutils literal"&gt;.sample&lt;/tt&gt; which can be
-put to use by removing the extension.&lt;/p&gt;
-&lt;p&gt;In my particular case, I want to regenerate the output through &lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;,
-automatically commit all the changes in the &lt;tt class="docutils literal"&gt;./output&lt;/tt&gt; directory and finally
-push both generated code and the source code.  The &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; hook is what I
-need for that as it is run before &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt;.  The annotated content of my
-&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; script is:&lt;/p&gt;
+put to use by removing the extension.  The script needs to have the executable
+flag set (with &lt;tt class="docutils literal"&gt;chmod +x &amp;lt;hook&amp;gt;&lt;/tt&gt; and can be in any scripting language you
+want, whether that be Python, bash, or whatever you prefer.&lt;/p&gt;
+&lt;p&gt;My &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; hook consists of the following file:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
  3
@@ -92,41 +87,55 @@ need for that as it is run before &lt;tt class="docutils literal"&gt;git push&lt
 12
 13
 14
-15
-16
-17
-18
-19
-20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/sh&lt;/span&gt;
+15&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/zsh&lt;/span&gt;
 
-&lt;span class="c"&gt;# Get the short hash of the latest source commit&lt;/span&gt;
 &lt;span class="nv"&gt;commit_hash&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git rev-parse --short HEAD&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;# Regenerate the output, and return an error if it fails (otherwise move on)&lt;/span&gt;
 make publish &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 1
-&lt;span class="c"&gt;# Move to the output directory&lt;/span&gt;
 &lt;span class="nb"&gt;cd &lt;/span&gt;output
-&lt;span class="c"&gt;# Tell git we&amp;#39;re working on a different repository&lt;/span&gt;
 &lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;GIT_WORK_TREE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;# If there are no changes (i.e. git diff exist with 1),&lt;/span&gt;
-git diff --exit-code 2&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &amp;gt;/dev/null
+git diff --exit-code &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&amp;gt;/dev/null
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; -eq &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-    &lt;span class="c"&gt;# Stage, commit and push everything&lt;/span&gt;
+    rm -rf pages
     git add --all
     git commit -m &lt;span class="s2"&gt;&amp;quot;Update to &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;commit_hash&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;.&amp;quot;&lt;/span&gt;
     git push
 &lt;span class="k"&gt;else&lt;/span&gt;
-    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;No changes to &amp;#39;output&amp;#39;.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;No changes to the &amp;#39;output&amp;#39;.&amp;quot;&lt;/span&gt;
 &lt;span class="k"&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;Finally, with all this setup I just need to run &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt; and the website will be automatically updated!&lt;/p&gt;
-&lt;table class="docutils footnote" frame="void" id="theme" rules="none"&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;The script begins in the root of the &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; branch where it gets the short
+hash of the latest commit (line 3).  It then uses &lt;tt class="docutils literal"&gt;make publish&lt;/tt&gt; in order to
+generate the content with Pelican and if, for any reason, that fails the hook
+exits with a non-zero value causing the push to be aborted.&lt;/p&gt;
+&lt;p&gt;Once the content is generated, we switch branches (line 5) and update
+&lt;tt class="docutils literal"&gt;GIT_WORK_TREE&lt;/tt&gt;.  This is an environment variable that overrides where Git
+looks for file.  Typically, it is not set and the repository is inferred based
+on the current working directory but in the case of a hook, &lt;tt class="docutils literal"&gt;GIT_WORK_TREE&lt;/tt&gt; is
+set and changing directories to another repository doesn't actually cause Git to
+change directories.&lt;/p&gt;
+&lt;p&gt;Next, we check if there are any changes to be content with &lt;tt class="docutils literal"&gt;git diff
+&lt;span class="pre"&gt;--exit-code&lt;/span&gt;&lt;/tt&gt;.  This exist with status &lt;tt class="docutils literal"&gt;1&lt;/tt&gt; if there are changes, and status
+&lt;tt class="docutils literal"&gt;0&lt;/tt&gt; if there are none.  Line 8 then checks for this exit code and if there is
+no change it simply says that there is nothing to be done.  On the other hand,
+if there are changes it stages everything (line 10), commits it with a reference
+to the corresponding commit in &lt;tt class="docutils literal"&gt;source&lt;/tt&gt; (line 11) and pushes the changes (line
+12).&lt;/p&gt;
+&lt;p&gt;The only line I have no addressed is line 9: &lt;tt class="docutils literal"&gt;rm &lt;span class="pre"&gt;-rf&lt;/span&gt; pages&lt;/tt&gt;.  The &lt;tt class="docutils literal"&gt;pages&lt;/tt&gt;
+directory is created by Pelican because it contains submodules, and these
+submodules have a special &lt;tt class="docutils literal"&gt;.git&lt;/tt&gt; symlink which Pelican treats as a file.  As a
+result, Pelican copies the hierarchy up to the &lt;tt class="docutils literal"&gt;.git&lt;/tt&gt; symlink which ultimately
+causes Github to get confused because when it receives the pages, it tries to
+load the submodule and fails.&lt;/p&gt;
+&lt;p&gt;Thanks to the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; script, running &lt;tt class="docutils literal"&gt;git push&lt;/tt&gt; from the parent
+directory takes care of pushing all the changes to the website automatically.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="fn-jekyll" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;The reason for the theme being tracked in a separate branch is that
-I may end up moving the branch to its own proper repository in the
-future, and I could do the same for the source branch though I think
-it makes more sense to keep the source and output in the same
-repositories.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Github also supports Jekyll sites.  In this case, you can just
+upload the Jekyll source files and Github will automatically
+generate the output and serve that.  Unfortunately, you can't
+customize which Gems Github uses, so this option is not as
+flexible.&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
