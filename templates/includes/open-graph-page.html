@@ -1,0 +1,16 @@
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="{{ SITENAME }}"/>
+<meta property="og:title" content="{{ page.title }}"/>
+<meta property="og:description" content="{{ page.summary|striptags }}"/>
+<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
+<meta property="og:locale" content="{{ page.metadata.get('og_locale', OG_LOCALE) }}"/>
+{% if page.metadata.cover or SITELOGO %}
+<meta property="og:image" content="{{ page.metadata.get('cover', SITELOGO) }}">
+{% endif %}
+<meta property="article:author" content="{{ SITEURL }}/{{ page.author.url }}">
+<meta property="article:modified_time" content="{{ page.modified }}"/>
+<meta property="article:published_time" content="{{ page.date }}"/>
+<meta property="article:section" content="{{ page.category.name }}"/>
+{% for tag in page.tags %}
+<meta property="article:tag" content="{{ tag.name }}"/>
+{% endfor %}

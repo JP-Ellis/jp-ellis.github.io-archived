@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} &ndash; {% endblock %}
 
+{% block meta %}
+<meta name="author" content="{{ page.author.name }}" />
+<meta name="description" content="{{ page.summary|striptags }}" />
+<meta name="keywords" content="{{ page.tags|join(', ') }}">
+{% include "includes/open-graph-page.html" %}
+{% endblock %}
+
 {% block breadcrumbs %}
 {% for parent in page.parents %}
 <li class="inter"><a href="{{ SITEURL }}/{{ parent.url }}">{{ parent.title }}</a></li>
