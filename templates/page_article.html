@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }} &ndash; {% endblock %}
 
 {% block meta %}
 <meta name="author" content="{{ page.author.name }}" />
@@ -7,6 +6,8 @@
 <meta name="keywords" content="{{ page.tags|join(', ') }}">
 {% include "includes/open-graph-page.html" %}
 {% endblock %}
+
+{% block title %}{{ page.title }} &ndash; {% endblock %}
 
 {% block breadcrumbs %}
 {% for parent in page.parents %}
@@ -16,15 +17,9 @@
 {% endblock %}
 
 {% block content %}
-{% include "includes/page.html" %}
-
-{% for child in page.children|sort(attribute='date')|sort(attribute='sort') %}
-{% if page.slug != child.slug %}
-{% with page=child %}
-{% include "includes/page-summary.html" %}
+{% with article=page %}
+{% include "includes/article.html" %}
 {% endwith %}
-{% endif %}
-{% endfor %}
 {% endblock %}
 
 {% block additional_js %}

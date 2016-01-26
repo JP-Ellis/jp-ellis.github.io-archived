@@ -1,0 +1,21 @@
+<article>
+  <header>
+    <div class="header-left">
+      <h1 id="{{ article.slug }}">{{ article.title }}</h1>
+      <span class="article-date">Posted on {{ article.locale_date }}</span>
+    </div>
+    <share-button class="btn btn-primary"></share-button>
+    <script>new ShareButton({ui: {flyout: "top left"}, networks: {pinterest: {enabled: false}}});</script>
+  </header>
+  <div class="content">
+    {{ article.content }}
+  </div>
+  {% if article.tags %}
+  <div class="tags">
+    {% for tag in article.tags %}
+    <a class="label label-primary" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% include "includes/disqus.html" %}
+</article>
