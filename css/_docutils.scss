@@ -18,6 +18,10 @@
         .label {
             font-size: 1em;
         }
+
+        & + & {
+            border-top: 0;
+        }
     }
 }
 
