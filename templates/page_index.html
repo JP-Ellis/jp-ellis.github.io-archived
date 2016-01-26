@@ -26,3 +26,9 @@
 {% endif %}
 {% endfor %}
 {% endblock %}
+
+{% block additional_js %}
+{% with article=page %}
+{% include "includes/jsonld-article.html" %}
+{% endwidth %}
+{% endblock %}
