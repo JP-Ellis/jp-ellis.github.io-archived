@@ -12,7 +12,6 @@ tt {
 // Inline code
 code {
     padding: .2rem .4rem;
-    font-size: 90%;
     color: $code-color;
     background-color: $code-bg;
     @include border-radius($border-radius);
@@ -22,7 +21,6 @@ code {
 // User input typically entered via keyboard
 kbd {
     padding: .2rem .4rem;
-    font-size: 90%;
     color: $kbd-color;
     background-color: $kbd-bg;
     @include border-radius($border-radius-sm);
@@ -42,7 +40,6 @@ kbd {
     margin-top: 0;
     margin-bottom: $spacer-y;
     font-size: 90%;
-    line-height: $line-height;
     color: $pre-color;
     max-height: $pre-scrollable-max-height;
     overflow-y: scroll;
@@ -65,7 +62,6 @@ kbd {
     display: block;
     margin-bottom: $spacer-y;
     font-size: 90%;
-    line-height: $line-height;
     color: $pre-color;
     color: white;
     width: 100%;

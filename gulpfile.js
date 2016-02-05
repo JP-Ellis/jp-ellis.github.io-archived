@@ -59,8 +59,7 @@ gulp.task('dist', ['css', 'fonts', 'images', 'submodules']);
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch(paths.compass, ['compass']);
-    gulp.watch(paths.polymer, ['polymer']);
+    gulp.watch(paths.compass, ['css']);
     gulp.watch(paths.images, ['images']);
 });
 
