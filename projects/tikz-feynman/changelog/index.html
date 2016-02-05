@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en_au">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="robots" content=""/>
+
+    <!-- Metadata -->
+    <title>Changelog &ndash; Joshua Ellis</title>
+<meta name="author" content="Joshua Ellis" />
+<meta name="description" content="In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman's versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github." />
+<meta name="keywords" content="">
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Joshua Ellis"/>
+<meta property="og:title" content="Changelog"/>
+<meta property="og:description" content="In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman's versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github."/>
+<meta property="og:url" content="http://www.jpellis.me/projects/tikz-feynman/changelog/"/>
+<meta property="og:locale" content="en_AU"/>
+<meta property="article:author" content="http://www.jpellis.me/author/joshua-ellis/">
+<meta property="article:modified_time" content=""/>
+<meta property="article:published_time" content="2016-02-05 00:00:00+11:00"/>
+<meta property="article:section" content="tikz-feynman"/>
+
+<!-- icons and bar theme -->
+<meta name="theme-color" content="#D43400">
+<link id="favicon" rel="shortcut icon" href="http://www.jpellis.me/theme/images/favicon-16.png" sizes="16x16">
+<link id="favicon" rel="shortcut icon" href="http://www.jpellis.me/theme/images/favicon-32.png" sizes="32x32">
+<link id="favicon" rel="shortcut icon" href="http://www.jpellis.me/theme/images/favicon-64.png" sizes="64x64">
+<link id="favicon" rel="shortcut icon" href="http://www.jpellis.me/theme/images/favicon-128.png" sizes="128x128">
+<link id="favicon" rel="shortcut icon" href="http://www.jpellis.me/theme/images/favicon-256.png" sizes="256x256"><!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="http://www.jpellis.me/theme/css/style.min.css">
+<!-- Share button -->
+<link rel="stylesheet" type="text/css" href="http://www.jpellis.me/theme/css/share-button.min.css">
+<script type="text/javascript" src="http://www.jpellis.me/theme/js/share-button.min.js"></script><!-- Feeds -->
+<link href="http://www.jpellis.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joshua Ellis Atom">
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>  </head>
+  <body unresolved>
+    <aside>
+<a href="http://www.jpellis.me">
+  <img src="http://www.jpellis.me/theme/images/profile.png" alt="Joshua Ellis" title="Joshua Ellis">
+</a>
+<h1><a href="http://www.jpellis.me">Joshua Ellis</a></h1>
+<p>Masters of Physics Candidate</p>
+<nav>
+  <ul class="pages">
+    <li><a href="http://www.jpellis.me/about/#about">About</a></li>
+    <li><a href="http://www.jpellis.me/projects/#projects">Projects</a></li>
+  </ul>
+</nav>
+<ul class="social">
+  <li><a class="github" href="https://github.com/JP-Ellis" target="_blank"><i>Github</i></a></li>
+  <li><a class="email" href="mailto:josh@jpellis.me" target="_blank"><i>Email</i></a></li>
+  <li><a class="linkedin" href="https://au.linkedin.com/in/joshuapellis" target="_blank"><i>LinkedIn</i></a></li>
+</ul>
+<ul class="feeds">
+  <a href="http://www.jpellis.me/feeds/all.atom.xml">Atom</a>
+  <a href="http://www.jpellis.me/sitemap.xml">Sitemap</a>
+</ul>    </aside>
+    <div class="content">
+      <nav>
+        <ul class="breadcrumb">
+          <li class="home"><a href="http://www.jpellis.me">Home</a></li>
+<li class="inter"><a href="http://www.jpellis.me/projects/">Projects</a></li>
+<li class="inter"><a href="http://www.jpellis.me/projects/tikz-feynman/">TikZ-Feynman</a></li>
+<li class="active">Changelog</li>
+        </ul>
+      </nav>
+      <main>
+<article>
+  <header>
+    <div class="header-left">
+      <h1 id="changelog">Changelog</h1>
+      <span class="article-date">Posted on Fri 05 February 2016</span>
+    </div>
+    <share-button class="btn btn-primary"></share-button>
+    <script>new ShareButton({ui: {flyout: "top left"}, networks: {pinterest: {enabled: false}}});</script>
+  </header>
+  <div class="content">
+    <p>In order to make it easier for people to keep up to date with new releases of
+Ti<em>k</em>Z-Feynman, Ti<em>k</em>Z-Feynman's versioning approximately follows semantic
+versioning, and it is recommended that users load the package with
+<tt class="docutils literal"><span class="pre">\usepackage[compat=x.y.z]{tikz-feynman}</span></tt>.  A log of the important changes is
+kept here, and a complete log of every change is kept through the <a class="reference external" href="https://github.com/JP-Ellis/tikz-feynman/commits/master">commit
+history</a> on Github.</p>
+
+<p><a class="reference external" href="http:://semver.org">Semantic versioning</a> is a way of labelling changes to a program in such a way
+that users know immediately how big this change is.  In the case of
+Ti<em>k</em>Z-Feynman, I intend to approximately follow semantic versioning:</p>
+<ul class="simple">
+<li>Changes in the third number (<tt class="docutils literal">1.0.0</tt> to <tt class="docutils literal">1.0.1</tt>) will consist of bug fixes
+and very minor changes but they should not change the output otherwise;</li>
+<li>Changes in the second number (<tt class="docutils literal">1.0.0</tt> to <tt class="docutils literal">1.1.0</tt>) will consist of new
+features but everything should be backwards compatible, or the backward
+incompatible change should only be very minor.  The generated output should
+remain mostly unchanged.</li>
+<li>Finally, changes in the first number (<tt class="docutils literal">1.0.0</tt> to <tt class="docutils literal">2.0.0</tt>) indicates a
+major change in the package and code written for <tt class="docutils literal">1.0.0</tt> is not guaranteed
+to work on 2.0.0.</li>
+</ul>
+<p>The changes for each version are listed below, along with explanation as the
+possible repercussions.</p>
+<div class="section" id="v1-1-0">
+<h2>v1.1.0</h2>
+<p><em>5th February 2016</em></p>
+<ul class="simple">
+<li>Edge styles now all stack.  Originally, specifying multiple styles (such as
+<tt class="docutils literal">[fermion, gluon]</tt>) would sometimes result in the both styles being used, or
+the latter replacing the first.  Now, all edge styles are applied and stack
+thus allowing for many styles used in supersymmetry models.</li>
+<li>A new edge style, <tt class="docutils literal">plain</tt>, is introduced.  This allows the having with a
+straight line going through another style.  For example, <tt class="docutils literal">[plain, gluon]</tt>
+will result in a gluino.</li>
+<li>Simplified the use of <tt class="docutils literal">every &lt;key&gt;</tt>.  Originally, modifying these keys
+required one to use <tt class="docutils literal">every <span class="pre">&lt;key&gt;/.style={...}</span></tt>, which is not necessarily the
+most intuitive.  This has been replaced with <tt class="docutils literal">every <span class="pre">&lt;key&gt;={...}</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="v1-0-1">
+<h2>v1.0.1</h2>
+<p><em>5th February 2016</em></p>
+<ul>
+<li><p class="first">Allow for <tt class="docutils literal">compat=x.y.z</tt> as an argument when loading the package.
+Ti<em>k</em>Z-Feynman used to require:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usepackage</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
+<span class="k">\tikzfeynmanset</span><span class="nb">{</span>compat=1.0.0<span class="nb">}</span>
+</pre></div>
+</td></tr></table><p>but the new version now works with</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usepackage</span><span class="na">[compat=1.0.1]</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
+</pre></div>
+</td></tr></table></li>
+<li><p class="first">Using pdfLaTeX fails gracefully.  It was always intended that Ti<em>k</em>Z-Feynman
+fail gracefully if LuaLaTeX isn't used and I introduced a warning to that
+effect; however, all the keys that require LuaLaTeX still caused compilations
+to fail.  Instead, every use of a key which requires LuaLaTeX produces another
+warning.</p>
+</li>
+<li><p class="first">Fix compatibility with Ti<em>k</em>Z <tt class="docutils literal">v3.0.0</tt>.  Although the ways versions
+<tt class="docutils literal">3.0.0</tt>, <tt class="docutils literal">3.0.1</tt> and <tt class="docutils literal">3.0.1a</tt> is fixed is the same, the patch file
+included had minor differences with <tt class="docutils literal">3.0.0</tt> which caused errors.</p>
+</li>
+<li><p class="first">Allow for new lines in arguments.  For some reason, LaTeX treats new lines
+within <tt class="docutils literal">#1</tt> in the definition of macros slightly differently to newline
+outside.  As a result, it caused the following correct code the fail</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\feynmandiagram</span> [
+  large,
+  vertical=a to b
+] <span class="nb">{</span>
+  a -- b
+<span class="nb">}</span>;
+</pre></div>
+</td></tr></table></li>
+</ul>
+</div>
+<div class="section" id="v1-0-0">
+<h2>v1.0.0</h2>
+<p><em>19th January 2016</em></p>
+<ul class="simple">
+<li>First release.</li>
+</ul>
+</div>
+
+  </div>
+<div id="disqus_thread"></div>
+<script>
+ var disqus_config = function () {
+   this.page.url = "http://www.jpellis.me/projects/tikz-feynman/changelog/";
+   this.page.identifier = "2016-02-05-changelog";
+ };
+ (function() {
+   var d = document, s = d.createElement('script');
+   s.src = '//jpellisgithubio.disqus.com/embed.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>      </main>
+      <footer>
+<p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+    <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"/>
+  </a>
+  &copy; Joshua Ellis  &ndash;
+  This work is licensed under an <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+    Attribution-ShareAlike 4.0 International License
+  </a>
+</p><p>
+  Built using <a href="http://getpelican.com" target="_blank">Pelican</a>
+  &ndash;
+  Theme by <a href="http://jp-ellis.github.io" target="_blank">Joshua Ellis</a>
+</p>      </footer>
+    </div>
+
+<script type="text/javascript">
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-62514224-3', 'auto');
+ ga('send', 'pageview');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Changelog",
+  "headline": "Changelog",
+  "datePublished": "2016-02-05 00:00:00+11:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Joshua Ellis",
+    "url": "http://www.jpellis.me/author/joshua-ellis/"
+  },
+  "image": "",
+  "url": "http://www.jpellis.me/projects/tikz-feynman/changelog/",
+  "description": "In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman's versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github."
+}
+</script>
+  </body>
+</html>
