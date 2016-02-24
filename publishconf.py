@@ -27,6 +27,6 @@ OUTPUT_RETENTION = [
 
 # Services
 ################################################################################
-GOOGLE_ANALYTICS = 'UA-62514224-3'
-GOOGLE_TAG_MANAGER = 'GTM-NHX46L'
+# GOOGLE_ANALYTICS = 'UA-62514224-3'
+GOOGLE_TAG_MANAGER = 'GTM-M7H67J'
 DISQUS_SITENAME = "jpellisgithubio"
