@@ -19,9 +19,11 @@
     {% include "base/theme.html" %}
     {% include "base/share-button.html" %}
     {% include "base/feeds.html" %}
-    {% include "base/mathjax.html" %}
+    {% include "includes/mathjax.html" %}
+    {% include "includes/google-analytics.html" %}
   </head>
   <body unresolved>
+    {% include "includes/google-tag-manager.html" %}
     <aside>
       {% include 'base/sidebar.html' %}
     </aside>
@@ -41,8 +43,6 @@
         {% include 'base/notice.html' %}
       </footer>
     </div>
-
-    {% include "includes/google-analytics.html" %}
 
     {% block additional_js %}{% endblock %}
 
