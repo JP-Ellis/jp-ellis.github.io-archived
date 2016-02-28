@@ -1,0 +1,15 @@
+// Summarized Index
+//
+// Includes the tag and archive pages
+
+.aggregate-list {
+    padding-top: $spacer-y;
+    list-style-type: none;
+    padding-left: 0;
+
+    a {
+        font-size: $font-size-lg;
+        font-weight: 700;
+        padding-right: $spacer-x;
+    }
+}

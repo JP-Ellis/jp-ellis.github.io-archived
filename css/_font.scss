@@ -1,3 +1,7 @@
+// Loads the appropriate fonts
+//
+// For typography, look at _type.scss
+
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff ttf) {
     $src: null;
     $src: append($src, local(quote($name)), comma);
@@ -21,5 +25,6 @@
 }
 
 @include font-face("Inconsolata-g", "../fonts/Inconsolata-g", null, null, woff);
-@include font-face("EB Garamond", "../fonts/EB_Garamond", null, normal, woff);
-@include font-face("EB Garamond", "../fonts/EB_Garamond-Italic", null, italic, woff);
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,500);
