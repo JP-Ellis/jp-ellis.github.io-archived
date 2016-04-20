@@ -12,7 +12,7 @@ from pelicanconf import *
 
 PUBLISH = True
 
-SITEURL = '//jpellis.me'
+SITEURL = 'https://jpellis.me'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
