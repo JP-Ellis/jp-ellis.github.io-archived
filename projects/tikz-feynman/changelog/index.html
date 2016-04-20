@@ -132,11 +132,11 @@ most intuitive.  This has been replaced with <tt class="docutils literal">every 
 <li><p class="first">Allow for <tt class="docutils literal">compat=x.y.z</tt> as an argument when loading the package.
 Ti<em>k</em>Z-Feynman used to require:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usepackage</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
 <span class="k">\tikzfeynmanset</span><span class="nb">{</span>compat=1.0.0<span class="nb">}</span>
 </pre></div>
 </td></tr></table><p>but the new version now works with</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usepackage</span><span class="na">[compat=1.0.1]</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="na">[compat=1.0.1]</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
 </pre></div>
 </td></tr></table></li>
 <li><p class="first">Using pdfLaTeX fails gracefully.  It was always intended that Ti<em>k</em>Z-Feynman
@@ -157,7 +157,7 @@ outside.  As a result, it caused the following correct code the fail</p>
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\feynmandiagram</span> [
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\feynmandiagram</span> [
   large,
   vertical=a to b
 ] <span class="nb">{</span>

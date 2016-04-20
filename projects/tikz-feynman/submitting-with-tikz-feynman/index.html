@@ -128,7 +128,7 @@ directory on submission.  For more details as to how this works, read on.</p>
 6
 7
 8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">%% After having loaded `tikz` or `tikz-feynman`</span>
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c">%% After having loaded `tikz` or `tikz-feynman`</span>
 <span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>
 <span class="k">\immediate\write</span>18<span class="nb">{</span>mkdir -p pgf-img<span class="nb">}</span>
 <span class="k">\tikzexternalize</span>[
@@ -150,7 +150,7 @@ this library can used to to ensure that the LuaTeX engine is used regardless of
 what is generating the initial document.  The most minimal way to load the
 externalization library is as follows:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
 <span class="k">\tikzexternalize</span>                      <span class="c">%% Activate externalization</span>
 </pre></div>
 </td></tr></table><p>By default, the externalization library uses the same TeX engine to generate
@@ -161,7 +161,7 @@ specifying the system call to use:</p>
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
 <span class="k">\tikzexternalize</span>[                     <span class="c">%% Activate externalization</span>
   system call=<span class="nb">{</span>                       <span class="c">%% Use lualatex in system call</span>
     lualatex <span class="k">\tikzexternalcheckshellescape</span> -halt-on-error -interaction=batchmode -jobname=&quot;<span class="k">\image</span>&quot; &quot;<span class="k">\texsource</span>&quot;
@@ -192,7 +192,7 @@ with.</p>
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
 <span class="k">\immediate\write</span>18<span class="nb">{</span>mkdir -p pgf-img<span class="nb">}</span>  <span class="c">%% Create `pgf-img` directory</span>
 <span class="k">\tikzexternalize</span>[                     <span class="c">%% Activate externalization</span>
   prefix=pgf-img/,                    <span class="c">%% Avoid cluttering the directory</span>
@@ -216,7 +216,7 @@ view the change):</p>
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
 <span class="k">\immediate\write</span>18<span class="nb">{</span>mkdir -p pgf-img<span class="nb">}</span>  <span class="c">%% Create `pgf-img` directory</span>
 <span class="k">\tikzexternalize</span>[                     <span class="c">%% Activate externalization</span>
   prefix=pgf-img/,                    <span class="c">%% Avoid cluttering the directory</span>
@@ -258,7 +258,7 @@ to instruct the externalization library to generate this makefile:</p>
 6
 7
 8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usetikzlibrary</span><span class="nb">{</span>external<span class="nb">}</span>             <span class="c">%% Load the `external` library</span>
 <span class="k">\immediate\write</span>18<span class="nb">{</span>mkdir -p pgf-img<span class="nb">}</span>  <span class="c">%% Create `pgf-img` directory</span>
 <span class="k">\tikzexternalize</span>[                     <span class="c">%% Activate externalization</span>
   prefix=pgf-img/,                    <span class="c">%% Avoid cluttering the directory</span>
@@ -270,7 +270,7 @@ to instruct the externalization library to generate this makefile:</p>
 </pre></div>
 </td></tr></table><p>After processing the master TeX file, a new <tt class="docutils literal"><span class="pre">&lt;name&gt;.makefile</span></tt> is generated and
 can be executed with:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>make -j <span class="m">4</span> -f &lt;name&gt;.makefile
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>make -j <span class="m">4</span> -f &lt;name&gt;.makefile
 </pre></div>
 </td></tr></table><p>The <tt class="docutils literal"><span class="pre">-j</span> 4</tt> option instructs <tt class="docutils literal">make</tt> to run at most four tasks in parallel and
 <tt class="docutils literal"><span class="pre">-f</span></tt> tells <tt class="docutils literal">make</tt> which file to read (by default, it searches for
@@ -309,7 +309,7 @@ makefiles by this can be fixed by adding the following to <tt class="docutils li
 28
 29
 30
-31</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1"># Adapted from http://tex.stackexchange.com/a/145878/26980</span>
+31</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Adapted from http://tex.stackexchange.com/a/145878/26980</span>
 <span class="c1"># Add a few files to cleanup</span>
 <span class="nb">push</span> <span class="nv">@generated_exts</span><span class="p">,</span> <span class="s">&#39;figlist&#39;</span><span class="p">,</span> <span class="s">&#39;ist&#39;</span><span class="p">,</span> <span class="s">&#39;makefile&#39;</span><span class="p">,</span> <span class="s">&#39;unq&#39;</span><span class="p">;</span>
 <span class="c1"># On the initial run, %tikzexternalflag is set to an empty list (when</span>
@@ -357,7 +357,7 @@ obtain the appropriate version from <a class="reference external" href="https://
 same directory as your TeX master file.  This can be all achieved with:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre>wget https://github.com/JP-Ellis/tikz-feynman/archive/v1.0.0.tar.gz -O - <span class="p">|</span> tar -xz
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>wget https://github.com/JP-Ellis/tikz-feynman/archive/v1.0.0.tar.gz -O - <span class="p">|</span> tar -xz
 mv tikz-feynman-1.0.0/*.code.tex tikz-feynman-1.0.0/*.sty tikz-feynman-1.0.0/*.lua .
 rm -rvf tikz-feynman-1.0.0
 </pre></div>
@@ -365,7 +365,7 @@ rm -rvf tikz-feynman-1.0.0
 all images in <tt class="docutils literal"><span class="pre">pgf-img/</span></tt> are up to date.  Assuming that your master file
 consists of only TeX files, then you can create a tarball with everything in it
 with:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>tar cavf submission.tar *.tex *.sty pgf-img/*.md5 pgf-img/*.pdf
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>tar cavf submission.tar *.tex *.sty pgf-img/*.md5 pgf-img/*.pdf
 </pre></div>
 </td></tr></table><p>Of course if you have extra dependencies, you will need to adapt the above
 command to suit your needs.</p>

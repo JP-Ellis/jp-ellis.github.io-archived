@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Joshua Ellis</title><link href="//jpellis.me/" rel="alternate"></link><link href="//jpellis.me/feeds/all.atom.xml" rel="self"></link><id>//jpellis.me/</id><updated>2015-12-08T00:00:00+11:00</updated><entry><title>Git Hooks</title><link href="//jpellis.me/2015/12/git-hooks/" rel="alternate"></link><updated>2015-12-08T00:00:00+11:00</updated><author><name>Joshua Ellis</name></author><id>tag:jpellis.me,2015-12-08:2015/12/git-hooks/</id><summary type="html">&lt;p&gt;Git is a powerful version control system which has become the &lt;em&gt;de facto&lt;/em&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Joshua Ellis</title><link href="//jpellis.me/" rel="alternate"></link><link href="//jpellis.me/feeds/all.atom.xml" rel="self"></link><id>//jpellis.me/</id><updated>2016-04-11T00:00:00+10:00</updated><entry><title>Coupled Abelian Higgs</title><link href="//jpellis.me/2016/04/coupled-abelian-higgs/" rel="alternate"></link><published>2016-04-11T00:00:00+10:00</published><author><name>Joshua Ellis</name></author><id>tag:jpellis.me,2016-04-11:2016/04/coupled-abelian-higgs/</id><summary type="html">&lt;p&gt;The Abelian Higgs model is perhaps the simplest example of spontaneous symmetry
+breaking which gives mass to the boson.  The Lagrangian is given by&lt;/p&gt;
+&lt;p&gt;\begin{equation}
+\mathscr{L} = - \frac{1}{4} F_{\mu\nu}^{2} + | \partial_{\mu} \phi + i e A_{\mu} \phi | + m^{2} |\phi|^2 - \lambda |\phi|^{4};
+\end{equation}&lt;/p&gt;
+&lt;p&gt;however, I am interested in the next simplest scenario which involves two Higgs
+charged under the same gauge symmetry.  The Lagrangian becomes:&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\mathscr{L} = - \frac{1}{4} F_{\mu\nu}^{2} + | \partial_{\mu} \phi_{1} + i e_{1} A_{\mu} \phi_{1} | + m_{1}^{2} |\phi_{1}|^2 - \lambda |\phi|^{4};
+\end{align}&lt;/p&gt;
+</summary><category term="QFT"></category><category term="Symmetry breaking"></category></entry><entry><title>Git Hooks</title><link href="//jpellis.me/2015/12/git-hooks/" rel="alternate"></link><published>2015-12-08T00:00:00+11:00</published><author><name>Joshua Ellis</name></author><id>tag:jpellis.me,2015-12-08:2015/12/git-hooks/</id><summary type="html">&lt;p&gt;Git is a powerful version control system which has become the &lt;em&gt;de facto&lt;/em&gt;
 standard in recent years (judging by the popularity of &lt;a class="reference external" href="https://www.github.com/"&gt;Github&lt;/a&gt;).  Perhaps one of Git's underused features is its
 &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;hooks&lt;/a&gt;: small scripts that are run whenever a specific action is run.  For
 example, one could set up a &lt;em&gt;pre-push&lt;/em&gt; hook that runs the test suite so that
@@ -41,7 +51,7 @@ the end, my repository has the following structure:&lt;/p&gt;
 3
 4
 5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;jp-ellis.github.io/   &amp;lt;-- source branch
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jp-ellis.github.io/   &amp;lt;-- source branch
 ├── content/
 ├── output/           &amp;lt;-- master branch (submodule)
 ├── themes/
@@ -87,12 +97,12 @@ want, whether that be Python, bash, or whatever you prefer.&lt;/p&gt;
 12
 13
 14
-15&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/zsh&lt;/span&gt;
+15&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/zsh&lt;/span&gt;
 
 &lt;span class="nv"&gt;commit_hash&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git rev-parse --short HEAD&lt;span class="k"&gt;)&lt;/span&gt;
 make publish &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 1
-&lt;span class="nb"&gt;cd &lt;/span&gt;output
-&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;GIT_WORK_TREE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; output
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GIT_WORK_TREE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 git diff --exit-code &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&amp;gt;/dev/null
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; -eq &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
     rm -rf pages

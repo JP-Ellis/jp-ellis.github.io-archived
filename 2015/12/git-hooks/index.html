@@ -129,7 +129,7 @@ the end, my repository has the following structure:</p>
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre>jp-ellis.github.io/   &lt;-- source branch
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jp-ellis.github.io/   &lt;-- source branch
 ├── content/
 ├── output/           &lt;-- master branch (submodule)
 ├── themes/
@@ -175,12 +175,12 @@ want, whether that be Python, bash, or whatever you prefer.</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/zsh</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/zsh</span>
 
 <span class="nv">commit_hash</span><span class="o">=</span><span class="k">$(</span>git rev-parse --short HEAD<span class="k">)</span>
 make publish <span class="o">||</span> <span class="k">return</span> 1
-<span class="nb">cd </span>output
-<span class="nb">export </span><span class="nv">GIT_WORK_TREE</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+<span class="nb">cd</span> output
+<span class="nb">export</span> <span class="nv">GIT_WORK_TREE</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
 git diff --exit-code <span class="p">&amp;</span>&gt;/dev/null
 <span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
     rm -rf pages
