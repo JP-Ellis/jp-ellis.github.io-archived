@@ -16,14 +16,7 @@ SITEURL = '//jpellis.me'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = [
-    ".git",
-    ".gitignore",
-    "CNAME",
-    "google7e93ca521c7ff343.html",
-    "googleca17b845931f3580.html",
-    "googleca17b845931f3580.html",
-]
+OUTPUT_RETENTION = [".git"]
 
 # Services
 ################################################################################

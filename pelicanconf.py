@@ -52,9 +52,15 @@ THEME = 'themes/jp-ellis'
 # Paths
 ################################################################################
 PATH = 'content'
-STATIC_PATHS = ['blog', 'pages']
 ARTICLE_PATHS = ['blog']
 PAGE_PATHS = ['pages']
+STATIC_PATHS = ['blog', 'pages', 'static']
+EXTRA_PATH_METADATA = {
+    'static/CNAME': {'path': 'CNAME'},
+    'static/robots.txt': {'path': 'robots.txt'},
+    'static/google7e93ca521c7ff343.html': {'path': 'google7e93ca521c7ff343.html'},
+    'static/googleca17b845931f3580.html': {'path': 'googleca17b845931f3580.html'}
+}
 
 # Readjust all the paths as I prefer URLs which do not end in .html
 ########################################

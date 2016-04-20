@@ -1,0 +1,9 @@
+User-agent: *
+
+## Rather have people go the website than the PDFs directly.
+Noindex: /projects/tikz-feynman/tikz-feynman/tikz-feynman.pdf
+Noindex: /tikz-feynman/tikz-feynman.pdf
+Noindex: /projects/simpler-wick/simpler-wick/simpler-wick.pdf
+Noindex: /simpler-wick/simpler-wick.pdf
+
+Sitemap: https://jpellis.me/sitemap.xml
