@@ -124,7 +124,7 @@ JINJA_ENVIRONMENT = {}
 ################################################################################
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
-    'page_hierarchy',
+    'pelican-page-hierarchy',
     'render_math',
     'sitemap',
     'summary',

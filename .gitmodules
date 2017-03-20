@@ -5,9 +5,6 @@
 	path = output
 	url = https://github.com/JP-Ellis/jp-ellis.github.io.git
 	branch = master
-[submodule "plugins/page_hierarchy"]
-	path = plugins/page_hierarchy
-	url = https://github.com/akhayyat/pelican-page-hierarchy.git
 [submodule "content/pages/projects/tikz-feynman"]
 	path = content/pages/projects/tikz-feynman
 	url = https://github.com/JP-Ellis/tikz-feynman.git
@@ -20,3 +17,6 @@
 	path = content/pages/projects/rust-skiplist
 	url = https://github.com/JP-Ellis/rust-skiplist.git
 	branch = pages
+[submodule "plugins/pelican-page-hierarchy"]
+	path = plugins/pelican-page-hierarchy
+	url = https://github.com/akhayyat/pelican-page-hierarchy.git
