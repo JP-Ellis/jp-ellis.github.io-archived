@@ -7,11 +7,10 @@ About
 :slug: about
 :onmenu: True
 
-My name's Joshua Ellis.  I study at `The University of Melbourne
-<https://unimelb.edu.au>`_, currently completing a masters in the theoretical
-particle physics group.
+I'm a PhD candidate at `The University of Melbourne <https://unimelb.edu.au>`_,
+working under the supervision of Prof. Volkas.
 
-When I procrastinate, I usually end up starting other `side projects
-<{filename}projects.rst>`_ and this blog is one of these side projects.  I
-intend to write small articles whenever my procrastination results something
-mildly useful or interesting.
+In additional to physics, I enjoy working on some `side projects
+<{filename}projects.rst>`_ which may or may not be related to physics.  On such
+side-project is `Ti*k*Z-Feynman <{filename}projects/tikz-feynman.rst>` which
+allows for Feynman diagrams to be drawn entirely within LaTeX.
