@@ -1,1 +1,0 @@
-simpler-wick/index.rst

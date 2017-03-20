@@ -158,3 +158,17 @@ MATH_JAX = {
     'auto_insert': False,
     'tex_extensions': ['autoload-all.js'],
 }
+
+# Markdown
+################################################################################
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {
+            'linenums': True,
+            'css_class': 'highlight',
+        },
+        'markdown.extensions.extra': {},
+        # 'markdown.extensions.fenced_code': {},
+    },
+    'output_format': 'html5',
+}

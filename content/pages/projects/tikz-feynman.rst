@@ -1,1 +1,0 @@
-tikz-feynman/index.rst
