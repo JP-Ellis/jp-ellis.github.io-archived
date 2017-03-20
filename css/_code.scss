@@ -43,7 +43,7 @@ kbd {
     color: $pre-color;
     max-height: $pre-scrollable-max-height;
     overflow-y: scroll;
-    @include pygments-solarized(dark);
+    @include pygments-solarized(light);
 
     // Account for some code outputs that place code tags in pre tags
     code {
@@ -63,15 +63,14 @@ kbd {
     margin-bottom: $spacer-y;
     font-size: 90%;
     color: $pre-color;
-    color: white;
     width: 100%;
     max-height: $pre-scrollable-max-height;
     overflow-y: scroll;
     overflow-x: auto;
-    @include pygments-solarized(dark);
+    @include pygments-solarized(light);
 
     .syntax-inverted & {
-        @include pygments-solarized(light);
+        @include pygments-solarized(dark);
     }
 
     .linenos {
@@ -80,7 +79,6 @@ kbd {
         white-space: nowrap;
         overflow: hidden;
         padding: 0.2*$spacer;
-        background-color: $solarized-base02;
         text-align: right;
         pre {
             background-color: inherit;
