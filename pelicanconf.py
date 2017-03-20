@@ -9,7 +9,7 @@ PUBLISH = False
 AUTHOR = 'Joshua Ellis'
 SITENAME = "Joshua Ellis"
 SITETITLE = "Joshua Ellis"
-SITESUBTITLE = "Masters of Physics Candidate"
+SITESUBTITLE = "PhD Candidate"
 SITEDESCRIPTION = "Blog of young physicist Joshua Ellis"
 SITEURL = 'http://localhost:8000'
 # SITEURL = 'http://10.9.146.61:8000'
@@ -21,17 +21,14 @@ CC_LICENSE = {'name': 'Attribution-ShareAlike', 'slug': "by-sa", 'version': "4.0
 
 FRONTMATTER = """
 <p>
-My name is Joshua Ellis and I am a physics masters candidate at <a
-href="https://unimelb.edu.au">The University of Melbourne</a>.  I am currently
-completing my second year of masters and doing research in the theoretical
-particle physics groups.
+I'm Joshua Ellis, a PhD candidate at <a href="https://unimelb.edu.au">The University of Melbourne</a>.
 </p>
 
 <p>
 In addition to physics, I also enjoy coding.  I have done a fair bit of coding
 in C, C++, <a href="https://www.rust-lang.org">Rust</a>, Python and TeX/LaTeX.
 You can see some of the coding projects I have worked in over in the <a
-href="http://www.jpellis.me/projects/">projects section</a> of this website.
+href="http://www.jpellis.me/projects/">projects section</a>.
 </p>
 
 <p>
