@@ -9,12 +9,12 @@
     <!-- Metadata -->
     <title>Changelog &ndash; Joshua Ellis</title>
 <meta name="author" content="Joshua Ellis" />
-<meta name="description" content="In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman's versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github." />
+<meta name="description" content="In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman’s versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github." />
 <meta name="keywords" content="">
 <meta property="og:type" content="article"/>
 <meta property="og:site_name" content="Joshua Ellis"/>
 <meta property="og:title" content="Changelog"/>
-<meta property="og:description" content="In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman's versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github."/>
+<meta property="og:description" content="In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman’s versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github."/>
 <meta property="og:url" content="https://jpellis.me/projects/tikz-feynman/changelog/"/>
 <meta property="og:locale" content="en_AU"/>
 <meta property="article:author" content="https://jpellis.me/author/joshua-ellis/">
@@ -50,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <img src="https://jpellis.me/theme/images/profile.png" alt="Joshua Ellis" title="Joshua Ellis">
 </a>
 <h1><a href="https://jpellis.me">Joshua Ellis</a></h1>
-<p>Masters of Physics Candidate</p>
+<p>PhD Candidate</p>
 <nav>
   <ul class="pages">
     <li><a href="https://jpellis.me/about/#about">About</a></li>
@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>    </aside>
     <div class="content">
       <nav>
-        <ul class="breadcrumb">
+        <ul>
           <li class="home"><a href="https://jpellis.me">Home</a></li>
 <li class="inter"><a href="https://jpellis.me/projects/">Projects</a></li>
 <li class="inter"><a href="https://jpellis.me/projects/tikz-feynman/">TikZ-Feynman</a></li>
@@ -87,71 +87,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </header>
   <div class="content">
     <p>In order to make it easier for people to keep up to date with new releases of
-Ti<em>k</em>Z-Feynman, Ti<em>k</em>Z-Feynman's versioning approximately follows semantic
+Ti<em>k</em>Z-Feynman, Ti<em>k</em>Z-Feynman&#8217;s versioning approximately follows semantic
 versioning, and it is recommended that users load the package with
-<tt class="docutils literal"><span class="pre">\usepackage[compat=x.y.z]{tikz-feynman}</span></tt>.  A log of the important changes is
-kept here, and a complete log of every change is kept through the <a class="reference external" href="https://github.com/JP-Ellis/tikz-feynman/commits/master">commit
-history</a> on Github.</p>
+<code>\usepackage[compat=x.y.z]{tikz-feynman}</code>.  A log of the important changes is
+kept here, and a complete log of every change is kept through the <a href="https://github.com/JP-Ellis/tikz-feynman/commits/master">commit
+history</a> on&nbsp;Github.</p>
 
-<p><a class="reference external" href="http://semver.org">Semantic versioning</a> is a way of labelling changes to a program in such a way
-that users know immediately how big this change is.  In the case of
-Ti<em>k</em>Z-Feynman, I intend to approximately follow semantic versioning:</p>
-<ul class="simple">
-<li>Changes in the third number (<tt class="docutils literal">1.0.0</tt> to <tt class="docutils literal">1.0.1</tt>) will consist of bug fixes
-and very minor changes but they should not change the output otherwise;</li>
-<li>Changes in the second number (<tt class="docutils literal">1.0.0</tt> to <tt class="docutils literal">1.1.0</tt>) will consist of new
-features but everything should be backwards compatible, or the backward
-incompatible change should only be very minor.  The generated output should
-remain mostly unchanged.</li>
-<li>Finally, changes in the first number (<tt class="docutils literal">1.0.0</tt> to <tt class="docutils literal">2.0.0</tt>) indicates a
-major change in the package and code written for <tt class="docutils literal">1.0.0</tt> is not guaranteed
-to work on 2.0.0.</li>
+
+<p><a href="http://semver.org">Semantic versioning</a> is a way of labelling changes to a
+program in such a way that users know immediately how big this change is.  In
+the case of Ti<em>k</em>Z-Feynman, I intend to approximately follow semantic&nbsp;versioning:</p>
+<ul>
+<li>Changes in the third number (<code>1.0.0</code> to <code>1.0.1</code>) will consist of bug fixes
+  and very minor changes but they should not change the output&nbsp;otherwise;</li>
+<li>Changes in the second number (<code>1.0.0</code> to <code>1.1.0</code>) will consist of new
+  features but everything should be backwards compatible, or the backward
+  incompatible change should only be very minor.  The generated output should
+  remain mostly&nbsp;unchanged.</li>
+<li>Finally, changes in the first number (<code>1.0.0</code> to <code>2.0.0</code>) indicates a
+  major change in the package and code written for <code>1.0.0</code> is not guaranteed
+  to work on&nbsp;2.0.0.</li>
 </ul>
 <p>The changes for each version are listed below, along with explanation as the
-possible repercussions.</p>
-<div class="section" id="v1-1-0">
+possible&nbsp;repercussions.</p>
 <h2>v1.1.0</h2>
-<p><em>5th February 2016</em></p>
-<ul class="simple">
-<li>Edge styles now all stack.  Originally, specifying multiple styles (such as
-<tt class="docutils literal">[fermion, gluon]</tt>) would sometimes result in the both styles being used, or
-the latter replacing the first.  Now, all edge styles are applied and stack
-thus allowing for many styles used in supersymmetry models.</li>
-<li>A new edge style, <tt class="docutils literal">plain</tt>, is introduced.  This allows the having with a
-straight line going through another style.  For example, <tt class="docutils literal">[plain, gluon]</tt>
-will result in a gluino.</li>
-<li>Simplified the use of <tt class="docutils literal">every &lt;key&gt;</tt>.  Originally, modifying these keys
-required one to use <tt class="docutils literal">every <span class="pre">&lt;key&gt;/.style={...}</span></tt>, which is not necessarily the
-most intuitive.  This has been replaced with <tt class="docutils literal">every <span class="pre">&lt;key&gt;={...}</span></tt>.</li>
-</ul>
-</div>
-<div class="section" id="v1-0-1">
-<h2>v1.0.1</h2>
-<p><em>5th February 2016</em></p>
+<p><em>5th February&nbsp;2016</em></p>
 <ul>
-<li><p class="first">Allow for <tt class="docutils literal">compat=x.y.z</tt> as an argument when loading the package.
-Ti<em>k</em>Z-Feynman used to require:</p>
+<li>
+<p>Edge styles now all stack.  Originally, specifying multiple styles (such as
+  <code>[fermion, gluon]</code>) would sometimes result in the both styles being used, or
+  the latter replacing the first.  Now, all edge styles are applied and stack
+  thus allowing for many styles used in supersymmetry&nbsp;models.</p>
+</li>
+<li>
+<p>A new edge style, <code>plain</code>, is introduced.  This allows the having with a
+  straight line going through another style.  For example, <code>[plain, gluon]</code>
+  will result in a&nbsp;gluino.</p>
+</li>
+<li>
+<p>Simplified the use of <code>every &lt;key&gt;</code>.  Originally, modifying these keys
+  required one to use <code>every &lt;key&gt;/.style={...}</code>, which is not necessarily the
+  most intuitive.  This has been replaced with <code>every &lt;key&gt;={...}</code>.</p>
+</li>
+</ul>
+<h2>v1.0.1</h2>
+<p><em>5th February&nbsp;2016</em></p>
+<ul>
+<li>
+<p>Allow for <code>compat=x.y.z</code> as an argument when loading the package.
+  Ti<em>k</em>Z-Feynman used to&nbsp;require:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
 <span class="k">\tikzfeynmanset</span><span class="nb">{</span>compat=1.0.0<span class="nb">}</span>
 </pre></div>
-</td></tr></table><p>but the new version now works with</p>
+</td></tr></table>
+
+<p>but the new version now works&nbsp;with</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="na">[compat=1.0.1]</span><span class="nb">{</span>tikz-feynman<span class="nb">}</span>
 </pre></div>
-</td></tr></table></li>
-<li><p class="first">Using pdfLaTeX fails gracefully.  It was always intended that Ti<em>k</em>Z-Feynman
-fail gracefully if LuaLaTeX isn't used and I introduced a warning to that
-effect; however, all the keys that require LuaLaTeX still caused compilations
-to fail.  Instead, every use of a key which requires LuaLaTeX produces another
-warning.</p>
+</td></tr></table>
+
 </li>
-<li><p class="first">Fix compatibility with Ti<em>k</em>Z <tt class="docutils literal">v3.0.0</tt>.  Although the ways versions
-<tt class="docutils literal">3.0.0</tt>, <tt class="docutils literal">3.0.1</tt> and <tt class="docutils literal">3.0.1a</tt> is fixed is the same, the patch file
-included had minor differences with <tt class="docutils literal">3.0.0</tt> which caused errors.</p>
+<li>
+<p>Using pdfLaTeX fails gracefully.  It was always intended that Ti<em>k</em>Z-Feynman
+  fail gracefully if LuaLaTeX isn&#8217;t used and I introduced a warning to that
+  effect; however, all the keys that require LuaLaTeX still caused compilations
+  to fail.  Instead, every use of a key which requires LuaLaTeX produces another&nbsp;warning.</p>
 </li>
-<li><p class="first">Allow for new lines in arguments.  For some reason, LaTeX treats new lines
-within <tt class="docutils literal">#1</tt> in the definition of macros slightly differently to newline
-outside.  As a result, it caused the following correct code the fail</p>
+<li>
+<p>Fix compatibility with Ti<em>k</em>Z <code>v3.0.0</code>.  Although the ways versions
+  <code>3.0.0</code>, <code>3.0.1</code> and <code>3.0.1a</code> is fixed is the same, the patch file
+  included had minor differences with <code>3.0.0</code> which caused&nbsp;errors.</p>
+</li>
+<li>
+<p>Allow for new lines in arguments.  For some reason, LaTeX treats new lines
+  within <code>#1</code> in the definition of macros slightly differently to newline
+  outside.  As a result, it caused the following correct code the&nbsp;fail</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -164,17 +175,15 @@ outside.  As a result, it caused the following correct code the fail</p>
   a -- b
 <span class="nb">}</span>;
 </pre></div>
-</td></tr></table></li>
-</ul>
-</div>
-<div class="section" id="v1-0-0">
-<h2>v1.0.0</h2>
-<p><em>19th January 2016</em></p>
-<ul class="simple">
-<li>First release.</li>
-</ul>
-</div>
+</td></tr></table>
 
+</li>
+</ul>
+<h2>v1.0.0</h2>
+<p><em>19th January&nbsp;2016</em></p>
+<ul>
+<li>First&nbsp;release.</li>
+</ul>
   </div>
 <div id="disqus_thread"></div>
 <script>
@@ -222,7 +231,7 @@ outside.  As a result, it caused the following correct code the fail</p>
   },
   "image": "",
   "url": "https://jpellis.me/projects/tikz-feynman/changelog/",
-  "description": "In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman's versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github."
+  "description": "In order to make it easier for people to keep up to date with new releases of TikZ-Feynman, TikZ-Feynman’s versioning approximately follows semantic versioning, and it is recommended that users load the package with \usepackage[compat=x.y.z]{tikz-feynman}. A log of the important changes is kept here, and a complete log of every change is kept through the commit history on Github."
 }
 </script>
   </body>

@@ -7,14 +7,14 @@
     <meta name="robots" content=""/>
 
     <!-- Metadata -->
-    <title>Git Hooks &ndash; Joshua Ellis</title>
+    <title>Git&nbsp;Hooks &ndash; Joshua Ellis</title>
 <meta name="author" content="Joshua Ellis" />
-<meta name="description" content="Git is a powerful version control system which has become the de facto standard in recent years (judging by the popularity of Github). Perhaps one of Git's underused features is its hooks: small scripts that are run whenever a specific action is run. For example, one could set up a pre-push hook that runs the test suite so that breaking changes aren't inadvertently introduced. Another common use for hooks is to deploy changes. For example, one could have a server hosting a basic Jekyll or Pelican blog and using the post-update hook one could get the server to automatically regenerate the website whenever changes are pushed onto the server. Since Git hooks allow any script to be executed, hooks can be used to automate nearly any task." />
+<meta name="description" content="Git is a powerful version control system which has become the de facto standard in recent years (judging by the popularity of Github). Perhaps one of Git’s underused features is its hooks: small scripts that are run whenever a specific action is run. For example, one could set up a pre-push hook that runs the test suite so that breaking changes aren’t inadvertently introduced. Another common use for hooks is to deploy changes. For example, one could have a server hosting a basic Jekyll or Pelican blog and using the post-update hook one could get the server to automatically regenerate the website whenever changes are pushed onto the server. Since Git hooks allow any script to be executed, hooks can be used to automate nearly any task." />
 <meta name="keywords" content="git">
 <meta property="og:type" content="article"/>
 <meta property="og:site_name" content="Joshua Ellis"/>
-<meta property="og:title" content="Git Hooks"/>
-<meta property="og:description" content="Git is a powerful version control system which has become the de facto standard in recent years (judging by the popularity of Github). Perhaps one of Git's underused features is its hooks: small scripts that are run whenever a specific action is run. For example, one could set up a pre-push hook that runs the test suite so that breaking changes aren't inadvertently introduced. Another common use for hooks is to deploy changes. For example, one could have a server hosting a basic Jekyll or Pelican blog and using the post-update hook one could get the server to automatically regenerate the website whenever changes are pushed onto the server. Since Git hooks allow any script to be executed, hooks can be used to automate nearly any task."/>
+<meta property="og:title" content="Git&nbsp;Hooks"/>
+<meta property="og:description" content="Git is a powerful version control system which has become the de facto standard in recent years (judging by the popularity of Github). Perhaps one of Git’s underused features is its hooks: small scripts that are run whenever a specific action is run. For example, one could set up a pre-push hook that runs the test suite so that breaking changes aren’t inadvertently introduced. Another common use for hooks is to deploy changes. For example, one could have a server hosting a basic Jekyll or Pelican blog and using the post-update hook one could get the server to automatically regenerate the website whenever changes are pushed onto the server. Since Git hooks allow any script to be executed, hooks can be used to automate nearly any task."/>
 <meta property="og:url" content="https://jpellis.me/2015/12/git-hooks/"/>
 <meta property="og:locale" content="en_AU"/>
 <meta property="article:author" content="https://jpellis.me/author/joshua-ellis/">
@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <img src="https://jpellis.me/theme/images/profile.png" alt="Joshua Ellis" title="Joshua Ellis">
 </a>
 <h1><a href="https://jpellis.me">Joshua Ellis</a></h1>
-<p>Masters of Physics Candidate</p>
+<p>PhD Candidate</p>
 <nav>
   <ul class="pages">
     <li><a href="https://jpellis.me/about/#about">About</a></li>
@@ -69,18 +69,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>    </aside>
     <div class="content">
       <nav>
-        <ul class="breadcrumb">
+        <ul>
           <li class="home"><a href="https://jpellis.me">Home</a></li>
 <li class="inter"><a href="https://jpellis.me/2015/">2015</a></li>
 <li class="inter"><a href="https://jpellis.me/2015/12/">December</a></li>
-<li class="active">Git Hooks</li>
+<li class="active">Git&nbsp;Hooks</li>
         </ul>
       </nav>
       <main>
 <article>
   <header>
     <div class="header-left">
-      <h1 id="git-hooks">Git Hooks</h1>
+      <h1 id="git-hooks">Git&nbsp;Hooks</h1>
       <span class="article-date">Posted on Tue 08 December 2015</span>
     </div>
     <share-button class="btn btn-primary"></share-button>
@@ -88,42 +88,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </header>
   <div class="content">
     <p>Git is a powerful version control system which has become the <em>de facto</em>
-standard in recent years (judging by the popularity of <a class="reference external" href="https://www.github.com/">Github</a>).  Perhaps one of Git's underused features is its
-<a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">hooks</a>: small scripts that are run whenever a specific action is run.  For
-example, one could set up a <em>pre-push</em> hook that runs the test suite so that
-breaking changes aren't inadvertently introduced.  Another common use for hooks
-is to deploy changes.  For example, one could have a server hosting a basic
-<a class="reference external" href="https://jekyllrb.com/">Jekyll</a> or <a class="reference external" href="http://getpelican.com/">Pelican</a> blog and using the <em>post-update</em> hook one could get the
-server to automatically regenerate the website whenever changes are pushed onto
-the server.  Since Git hooks allow <em>any</em> script to be executed, hooks can be
-used to automate nearly any task.</p>
-<!-- PELICAN_END_SUMMARY -->
-<p>This website is generated using <a class="reference external" href="http://getpelican.com/">Pelican</a> and is hosted with <a class="reference external" href="https://pages.github.com/">Github Pages</a>.
-Github Pages allows you to host your website for free with Github, and all you
-need to do is create a repository called <tt class="docutils literal">USERNAME.github.io</tt> and then Github
-will automatically start serving the HTML files from the <tt class="docutils literal">master</tt> branch of
-that repository.  <a class="footnote-reference" href="#fn-jekyll" id="id1">[1]</a> Github Pages also allows you to have
-per-projects websites.  In this case, you need to create a branch called
-<tt class="docutils literal"><span class="pre">gh-pages</span></tt> in any of your current repositories and Github will then serve the
-content of that branch over at <tt class="docutils literal">USERNAME.github.io/REPOSITORY</tt>.</p>
-<p>I first go through how my Github Pages is organized and then how I use Git hooks</p>
-<div class="section" id="github-pages-setup">
-<h2>Github Pages Setup</h2>
-<p>I have set up my <tt class="docutils literal"><span class="pre">jp-ellis.github.io</span></tt> with three branches:</p>
-<ul class="simple">
-<li><tt class="docutils literal">source</tt> contains the original files Pelican uses in order to generate the
-website;</li>
-<li><tt class="docutils literal">master</tt> contains the output generated by <a class="reference external" href="http://getpelican.com/">Pelican</a>.  Nearly all commits
-should be automatically generated;</li>
-<li><tt class="docutils literal">theme</tt> contains the theme-specific files.  This could be included within
-the <tt class="docutils literal">source</tt> branch, but I have kept it separate in case I want to load
-another theme, or if I wish to move the theme to its own repository.</li>
+standard in recent years (judging by the popularity
+of <a href="https://www.github.com/">Github</a>).  Perhaps one of Git&#8217;s underused features
+is its <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">hooks</a>: small
+scripts that are run whenever a specific action is run.  For example, one could
+set up a <em>pre-push</em> hook that runs the test suite so that breaking changes
+aren&#8217;t inadvertently introduced.  Another common use for hooks is to deploy
+changes.  For example, one could have a server hosting a
+basic <a href="https://jekyllrb.com/">Jekyll</a> or <a href="http://getpelican.com/">Pelican</a> blog
+and using the <em>post-update</em> hook one could get the server to automatically
+regenerate the website whenever changes are pushed onto the server.  Since Git
+hooks allow <em>any</em> script to be executed, hooks can be used to automate nearly
+any&nbsp;task.</p>
+
+
+<p>This website is generated using Pelican and is hosted
+with <a href="https://pages.github.com/">Github Pages</a>.  Github Pages allows you to host
+your website for free with Github, and all you need to do is create a repository
+called <code>USERNAME.github.io</code> and then Github will automatically start serving the
+<span class="caps">HTML</span> files from the <code>master</code> branch of that repository<sup id="fnref-fn:jekyll"><a class="footnote-ref" href="#fn-fn:jekyll">1</a></sup>.  Github
+Pages also allows you to have per-projects websites.  In this case, you need to
+create a branch called <code>gh-pages</code> in any of your current repositories and Github
+will then serve the content of that branch over at
+<code>USERNAME.github.io/REPOSITORY</code>.</p>
+<p>I first go through how my Github Pages is organized and then how I use Git&nbsp;hooks</p>
+<h1>Github Pages&nbsp;Setup</h1>
+<p>I have set up my <code>jp-ellis.github.io</code> with three&nbsp;branches:</p>
+<ul>
+<li><code>source</code> contains the original files Pelican uses in order to generate the&nbsp;website;</li>
+<li><code>master</code> contains the output generated by Pelican.  Nearly all commits
+  should be automatically&nbsp;generated;</li>
+<li><code>theme</code> contains the theme-specific files.  This could be included within
+  the <code>source</code> branch, but I have kept it separate in case I want to load
+  another theme, or if I wish to move the theme to its own&nbsp;repository.</li>
 </ul>
-<p>Since the <tt class="docutils literal">source</tt> branch requires the <tt class="docutils literal">theme</tt> branch, it is a good idea to
-add the <tt class="docutils literal">theme</tt> branch as a <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of <tt class="docutils literal">source</tt>.  This means that if you
-clone the <tt class="docutils literal">source</tt> branch into a new directory, you can also have Git clone
-submodules at once.  I have done the same with the <tt class="docutils literal">master</tt> branch so that in
-the end, my repository has the following structure:</p>
+<p>Since the <code>source</code> branch requires the <code>theme</code> branch, it is a good idea to add
+the <code>theme</code> branch as
+a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of <code>source</code>.
+This means that if you clone the <code>source</code> branch into a new directory, you can
+also have Git clone submodules at once.  I have done the same with the <code>master</code>
+branch so that in the end, my repository has the following&nbsp;structure:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -136,31 +140,31 @@ the end, my repository has the following structure:</p>
 │   └── jp-ellis/     &lt;-- theme branch (submodule)
 └── ...
 </pre></div>
-</td></tr></table><p>With everything setup this way, the general procedure to update the website is:</p>
-<ol class="arabic simple">
-<li>Make the changes to the <tt class="docutils literal">source</tt> branch, commit them;</li>
-<li>Push the <tt class="docutils literal">source</tt> branch.</li>
-<li>Run <tt class="docutils literal">make publish</tt> in order to generate the content with Pelican;</li>
-<li>Stage and commit all the changes in <tt class="docutils literal">./output/</tt> and push them;</li>
+</td></tr></table>
+
+<p>With everything setup this way, the general procedure to update the website&nbsp;is:</p>
+<ol>
+<li>Make the changes to the <code>source</code> branch, commit&nbsp;them;</li>
+<li>Push the <code>source</code> branch.</li>
+<li>Run <code>make publish</code> in order to generate the content with&nbsp;Pelican;</li>
+<li>Stage and commit all the changes in <code>./output/</code> and push&nbsp;them;</li>
 </ol>
-<p>Although four steps isn't all that much, steps 3 and 4 are tedious and always
+<p>Although four steps isn&#8217;t all that much, steps 3 and 4 are tedious and always
 the same and lend themselves very well to being automated by using the Git
-<tt class="docutils literal"><span class="pre">pre-push</span></tt> hook.</p>
-</div>
-<div class="section" id="git-pre-push-hook">
-<h2>Git Pre-push Hook</h2>
+<code>pre-push</code> hook.</p>
+<h1>Git Pre-push&nbsp;Hook</h1>
 <p>In order to automate steps 3 and 4 in the above list, I will use the
-<tt class="docutils literal"><span class="pre">pre-push</span></tt> hook.  As the name suggests, this hook is executed before every
+<code>pre-push</code> hook.  As the name suggests, this hook is executed before every
 push and if the script exits with a non-zero code, the push is aborted.  This
-could be used to make sure that breaking changes aren't pushed, or in my case,
+could be used to make sure that breaking changes aren&#8217;t pushed, or in my case,
 to make sure that generated content always follows closely the source files used
-to generate the content.</p>
-<p>The hooks are simple executable scripts located in <tt class="docutils literal">.git/hooks/</tt>.  By default,
-new repositories have a few sample scripts which end in <tt class="docutils literal">.sample</tt> which can be
+to generate the&nbsp;content.</p>
+<p>The hooks are simple executable scripts located in <code>.git/hooks/</code>.  By default,
+new repositories have a few sample scripts which end in <code>.sample</code> which can be
 put to use by removing the extension.  The script needs to have the executable
-flag set (with <tt class="docutils literal">chmod +x &lt;hook&gt;</tt> and can be in any scripting language you
-want, whether that be Python, bash, or whatever you prefer.</p>
-<p>My <tt class="docutils literal"><span class="pre">pre-push</span></tt> hook consists of the following file:</p>
+flag set (with <code>chmod +x &lt;hook&gt;</code> and can be in any scripting language you
+want, whether that be Python, bash, or whatever you&nbsp;prefer.</p>
+<p>My <code>pre-push</code> hook consists of the following&nbsp;file:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -178,7 +182,7 @@ want, whether that be Python, bash, or whatever you prefer.</p>
 15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/zsh</span>
 
 <span class="nv">commit_hash</span><span class="o">=</span><span class="k">$(</span>git rev-parse --short HEAD<span class="k">)</span>
-make publish <span class="o">||</span> <span class="k">return</span> 1
+make publish <span class="o">||</span> <span class="k">return</span> <span class="m">1</span>
 <span class="nb">cd</span> output
 <span class="nb">export</span> <span class="nv">GIT_WORK_TREE</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
 git diff --exit-code <span class="p">&amp;</span>&gt;/dev/null
@@ -191,43 +195,42 @@ git diff --exit-code <span class="p">&amp;</span>&gt;/dev/null
     <span class="nb">echo</span> <span class="s2">&quot;No changes to the &#39;output&#39;.&quot;</span>
 <span class="k">fi</span>
 </pre></div>
-</td></tr></table><p>The script begins in the root of the <tt class="docutils literal">source</tt> branch where it gets the short
-hash of the latest commit (line 3).  It then uses <tt class="docutils literal">make publish</tt> in order to
-generate the content with Pelican and if, for any reason, that fails the hook
-exits with a non-zero value causing the push to be aborted.</p>
-<p>Once the content is generated, we switch branches (line 5) and update
-<tt class="docutils literal">GIT_WORK_TREE</tt>.  This is an environment variable that overrides where Git
-looks for file.  Typically, it is not set and the repository is inferred based
-on the current working directory but in the case of a hook, <tt class="docutils literal">GIT_WORK_TREE</tt> is
-set and changing directories to another repository doesn't actually cause Git to
-change directories.</p>
-<p>Next, we check if there are any changes to be content with <tt class="docutils literal">git diff
-<span class="pre">--exit-code</span></tt>.  This exist with status <tt class="docutils literal">1</tt> if there are changes, and status
-<tt class="docutils literal">0</tt> if there are none.  Line 8 then checks for this exit code and if there is
-no change it simply says that there is nothing to be done.  On the other hand,
-if there are changes it stages everything (line 10), commits it with a reference
-to the corresponding commit in <tt class="docutils literal">source</tt> (line 11) and pushes the changes (line
-12).</p>
-<p>The only line I have no addressed is line 9: <tt class="docutils literal">rm <span class="pre">-rf</span> pages</tt>.  The <tt class="docutils literal">pages</tt>
-directory is created by Pelican because it contains submodules, and these
-submodules have a special <tt class="docutils literal">.git</tt> symlink which Pelican treats as a file.  As a
-result, Pelican copies the hierarchy up to the <tt class="docutils literal">.git</tt> symlink which ultimately
-causes Github to get confused because when it receives the pages, it tries to
-load the submodule and fails.</p>
-<p>Thanks to the <tt class="docutils literal"><span class="pre">pre-push</span></tt> script, running <tt class="docutils literal">git push</tt> from the parent
-directory takes care of pushing all the changes to the website automatically.</p>
-<table class="docutils footnote" frame="void" id="fn-jekyll" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Github also supports Jekyll sites.  In this case, you can just
-upload the Jekyll source files and Github will automatically
-generate the output and serve that.  Unfortunately, you can't
-customize which Gems Github uses, so this option is not as
-flexible.</td></tr>
-</tbody>
-</table>
-</div>
+</td></tr></table>
 
+<p>The script begins in the root of the <code>source</code> branch where it gets the short
+hash of the latest commit (line 3).  It then uses <code>make publish</code> in order to
+generate the content with Pelican and if, for any reason, that fails the hook
+exits with a non-zero value causing the push to be&nbsp;aborted.</p>
+<p>Once the content is generated, we switch branches (line 5) and update
+<code>GIT_WORK_TREE</code>.  This is an environment variable that overrides where Git looks
+for file.  Typically, it is not set and the repository is inferred based on the
+current working directory but in the case of a hook, <code>GIT_WORK_TREE</code> is set and
+changing directories to another repository doesn&#8217;t actually cause Git to change&nbsp;directories.</p>
+<p>Next, we check if there are any changes to be content with <code>git diff
+--exit-code</code>.  This exist with status <code>1</code> if there are changes, and status <code>0</code>
+if there are none.  Line 8 then checks for this exit code and if there is no
+change it simply says that there is nothing to be done.  On the other hand, if
+there are changes it stages everything (line 10), commits it with a reference to
+the corresponding commit in <code>source</code> (line 11) and pushes the changes (line&nbsp;12).</p>
+<p>The only line I have no addressed is line 9: <code>rm -rf pages</code>.  The <code>pages</code>
+directory is created by Pelican because it contains submodules, and these
+submodules have a special <code>.git</code> symlink which Pelican treats as a file.  As a
+result, Pelican copies the hierarchy up to the <code>.git</code> symlink which ultimately
+causes Github to get confused because when it receives the pages, it tries to
+load the submodule and&nbsp;fails.</p>
+<p>Thanks to the <code>pre-push</code> script, running <code>git push</code> from the parent directory
+takes care of pushing all the changes to the website&nbsp;automatically.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-fn:jekyll">
+<p>Github also supports Jekyll sites.  In this case, you can just
+upload the Jekyll source files and Github will automatically generate the output
+and serve that.  Unfortunately, you can&#8217;t customize which Gems Github uses, so
+this option is not as flexible.&#160;<a class="footnote-backref" href="#fnref-fn:jekyll" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
   </div>
   <div class="tags">
     <a class="label label-primary" href="https://jpellis.me/tag/git/">git</a>
@@ -267,8 +270,8 @@ flexible.</td></tr>
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "name": "Git Hooks",
-  "headline": "Git Hooks",
+  "name": "Git&nbsp;Hooks",
+  "headline": "Git&nbsp;Hooks",
   "datePublished": "2015-12-08 00:00:00+11:00",
   "dateModified": "",
   "author": {
@@ -278,7 +281,7 @@ flexible.</td></tr>
   },
   "image": "",
   "url": "https://jpellis.me/2015/12/git-hooks/",
-  "description": "Git is a powerful version control system which has become the de facto standard in recent years (judging by the popularity of Github). Perhaps one of Git's underused features is its hooks: small scripts that are run whenever a specific action is run. For example, one could set up a pre-push hook that runs the test suite so that breaking changes aren't inadvertently introduced. Another common use for hooks is to deploy changes. For example, one could have a server hosting a basic Jekyll or Pelican blog and using the post-update hook one could get the server to automatically regenerate the website whenever changes are pushed onto the server. Since Git hooks allow any script to be executed, hooks can be used to automate nearly any task."
+  "description": "Git is a powerful version control system which has become the de facto standard in recent years (judging by the popularity of Github). Perhaps one of Git’s underused features is its hooks: small scripts that are run whenever a specific action is run. For example, one could set up a pre-push hook that runs the test suite so that breaking changes aren’t inadvertently introduced. Another common use for hooks is to deploy changes. For example, one could have a server hosting a basic Jekyll or Pelican blog and using the post-update hook one could get the server to automatically regenerate the website whenever changes are pushed onto the server. Since Git hooks allow any script to be executed, hooks can be used to automate nearly any task."
 }
 </script>
   </body>
