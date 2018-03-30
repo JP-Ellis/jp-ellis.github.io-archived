@@ -20,3 +20,7 @@
 [submodule "plugins/pelican-page-hierarchy"]
 	path = plugins/pelican-page-hierarchy
 	url = https://github.com/akhayyat/pelican-page-hierarchy.git
+[submodule "themes/jp-ellis"]
+	path = themes/jp-ellis
+	url = https://github.com/JP-Ellis/jp-ellis.github.io.git
+	branch = theme
