@@ -26,20 +26,14 @@ CC_LICENSE = {
 
 FRONTMATTER = """
 <p>
-I'm Joshua Ellis, a PhD candidate at <a href="https://unimelb.edu.au">The University of Melbourne</a>.
+I'm Joshua Ellis, a PhD candidate at <a href="https://unimelb.edu.au">The University of Melbourne</a>.  My current
+research focuses leptogenesis in radiative neutrino mass models.
 </p>
 
 <p>
-In addition to physics, I also enjoy coding.  I have done a fair bit of coding
-in C, C++, <a href="https://www.rust-lang.org">Rust</a>, Python and TeX/LaTeX.
-You can see some of the coding projects I have worked in over in the <a
-href="http://www.jpellis.me/projects/">projects section</a>.
-</p>
-
-<p>
-This website will also contain a few blog posts which I intend to write when I
-have some spare time.  At the present stage, I intend to write posts on whatever
-I find interesting, whether it be in physics or some other interest of mine.
+In addition to physics, I also enjoy coding.  I have programmed in in C, C++, <a
+href="https://www.rust-lang.org">Rust</a>, Python and TeX/LaTeX.  You can see some of the coding projects I have worked
+in over in the <a href="http://www.jpellis.me/projects/">projects section</a>.
 </p>
 
 <p>
