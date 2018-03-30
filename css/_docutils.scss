@@ -1,6 +1,4 @@
 // Docutil specific markups
-//
-
 .docutils {
     &.literal {
         padding: .2rem .4rem;
@@ -11,10 +9,10 @@
 
     &.footnote {
         width: 100%;
-        padding-top: 0.5*$spacer-y;
+        padding-top: 0.5*$spacer;
         margin-bottom: $spacer;
         font-size: $font-size-sm;
-        border-top: 1px solid $gray;
+        border-top: 1px solid gray("500");
 
         .label {
             font-size: 1em;

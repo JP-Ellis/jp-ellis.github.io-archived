@@ -2,9 +2,9 @@ article {
     display: flex;
     flex-direction: column;
     margin: 0.5 * $spacer;
-    margin-bottom: $spacer-y;
+    margin-bottom: $spacer;
     padding: 0.5 * $spacer;
-    border: $gray;
+    border: gray("500");
     background: white;
     @include shadow(1);
 
@@ -20,19 +20,19 @@ article {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        border-bottom: 2px solid $gray-lighter;
-        margin-bottom: $spacer-y;
+        border-bottom: 2px solid gray("200");
+        margin-bottom: $spacer;
 
         h1, h2 {
-            color: $brand-primary;
+            color: $primary;
             flex-grow: 1;
             flex-shrink: 0;
-            margin-right: $spacer-x;
+            margin-right: $spacer;
             margin-top: 0;
         }
 
         .article-info {
-            color: $gray;
+            color: gray("500");
             text-align: right;
             flex-shrink: 1;
             font-size: $font-size-sm;

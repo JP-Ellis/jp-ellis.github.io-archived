@@ -1,19 +1,19 @@
 body > aside {
     color: #fff;
-    background-color: $gray-dark;
+    background-color: gray("700");
     text-align: center;
     display: flex;
     flex-direction: column;
     font-family: $headings-font-family;
 
     h1 {
-        margin: 0 $spacer-x;
-        color: $brand-primary-light;
+        margin: 0 $spacer;
+        color: liften($primary, $theme-color-interval);
 
         a {
-            color: $brand-primary-light;
+            color: ligten($primary, $theme-color-interval);
             &:hover {
-                color: $brand-primary;
+                color: $primary;
             }
         }
     }
@@ -21,7 +21,7 @@ body > aside {
     a {
         color: #fff;
         &:hover {
-            color: $gray-lighter;
+            color: gray("200");
         }
     }
 
@@ -35,9 +35,9 @@ body > aside {
         font-size: $font-size-lg;
         list-style-type: none;
         padding: 0;
-        margin-bottom: $spacer-y;
+        margin-bottom: $spacer;
         @media screen and (min-width: map_get($grid-breakpoints, md)) {
-            margin-bottom: 3*$spacer-y;
+            margin-bottom: 3*$spacer;
         }
     }
 
@@ -55,12 +55,12 @@ body > aside {
     .social {
         list-style-type: none;
         padding: 0;
-        padding-bottom: $spacer-y;
+        padding-bottom: $spacer;
         text-align: center;
 
         li {
             display: inline;
-            padding-right: $spacer-x;
+            padding-right: $spacer;
         }
 
         .github {

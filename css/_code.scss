@@ -1,26 +1,27 @@
 // Inline and block code styles
-//
-
 code,
 kbd,
 pre,
-samp,
-tt {
+samp {
     font-family: $font-family-monospace;
 }
 
 // Inline code
 code {
-    padding: .2rem .4rem;
+    font-size: $code-font-size;
     color: $code-color;
-    background-color: $code-bg;
-    @include border-radius($border-radius);
-    @include pygments-solarized(light);
+    word-break: break-word;
+
+    // Streamline the style when inside anchors to avoid broken underline and more
+    a > & {
+        color: inherit;
+    }
 }
 
 // User input typically entered via keyboard
 kbd {
-    padding: .2rem .4rem;
+    padding: $kbd-padding-y $kbd-padding-x;
+    font-size: $kbd-font-size;
     color: $kbd-color;
     background-color: $kbd-bg;
     @include border-radius($border-radius-sm);
@@ -38,8 +39,8 @@ kbd {
 :not(.highlight) > pre {
     display: block;
     margin-top: 0;
-    margin-bottom: $spacer-y;
-    font-size: 90%;
+    margin-bottom: $spacer;
+    font-size: $code-font-size;
     color: $pre-color;
     max-height: $pre-scrollable-max-height;
     overflow-y: scroll;
@@ -60,7 +61,7 @@ kbd {
 // Highlight Table
 .highlighttable {
     display: block;
-    margin-bottom: $spacer-y;
+    margin-bottom: $spacer;
     font-size: 90%;
     color: $pre-color;
     width: 100%;
@@ -75,7 +76,7 @@ kbd {
 
     .linenos {
         width: 1%;
-        min-width: 2*$spacer-x;
+        min-width: 2*$spacer;
         white-space: nowrap;
         overflow: hidden;
         padding: 0.2*$spacer;

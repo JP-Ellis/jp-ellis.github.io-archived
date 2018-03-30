@@ -1,53 +1,45 @@
 // Variables
 //
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-// Colors
+
+//
+// Color system
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #373a3c;
-$gray:                      #55595c;
-$gray-light:                #818a91;
-$gray-lighter:              #eceeef;
-$gray-lightest:             #f7f7f9;
-
-$brand-primary:             #D43400;
-$brand-primary-dark:        darken($brand-primary, 7%);
-$brand-primary-darker:      darken($brand-primary, 14%);
-$brand-primary-light:       lighten($brand-primary, 7%);
-$brand-primary-lighter:     lighten($brand-primary, 14%);
-$brand-success:             #5cb85c;
-$brand-info:                #5bc0de;
-$brand-warning:             #f0ad4e;
-$brand-danger:              #d9534f;
-
+$primary:                   #D43400;
 
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               true;
+$enable-caret:              true;
 $enable-rounded:            true;
 $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
-$enable-hover-media-query:  true;
 $enable-grid-classes:       true;
 $enable-print-styles:       true;
 
-// Typography
+// Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:     "Roboto Light", sans-serif;
-$font-family-serif:          "EB Garamond", serif;
-$font-family-monospace:      "Inconsolata-g", monospace;
-$font-family-base:           $font-family-sans-serif;
+$font-family-sans-serif:    "Roboto Light", sans-serif;
+$font-family-monospace:     "Inconsolata-g", monospace;
+$font-family-base:          $font-family-sans-serif;
 
+$headings-font-family:      "Roboto", sans-serif;
+$headings-font-weight:      400;
 
-$headings-font-family:   "Roboto", sans-serif;
-$headings-font-weight:   400;
+$font-size-xs:              .75rem;
+
+// Code
+
+$code-color:                gray("900");
 
 // Breadcrumbs
 
-$breadcrumb-bg:                 none;
+$breadcrumb-bg:             none;

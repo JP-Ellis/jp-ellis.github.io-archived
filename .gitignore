@@ -4,3 +4,4 @@
 /node_modules
 /static
 /.tern-port
+/package-lock.json
