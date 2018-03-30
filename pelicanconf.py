@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 PUBLISH = False
+LOAD_CONTENT_CACHE = False
 
 # Site Information
 ################################################################################
@@ -17,7 +18,11 @@ TIMEZONE = 'Australia/Melbourne'
 DEFAULT_LANG = 'en_AU'
 OG_LOCALE = DEFAULT_LANG
 FAVICON = ''
-CC_LICENSE = {'name': 'Attribution-ShareAlike', 'slug': "by-sa", 'version': "4.0"}
+CC_LICENSE = {
+    'name': 'Attribution-ShareAlike',
+    'slug': "by-sa",
+    'version': "4.0"
+}
 
 FRONTMATTER = """
 <p>
@@ -53,19 +58,36 @@ ARTICLE_PATHS = ['blog']
 PAGE_PATHS = ['pages']
 STATIC_PATHS = ['blog', 'pages', 'static']
 EXTRA_PATH_METADATA = {
-    'static/CNAME': {'path': 'CNAME'},
-    'static/robots.txt': {'path': 'robots.txt'},
-    'static/google7e93ca521c7ff343.html': {'path': 'google7e93ca521c7ff343.html'},
-    'static/googleca17b845931f3580.html': {'path': 'googleca17b845931f3580.html'}
+    'static/CNAME': {
+        'path': 'CNAME'
+    },
+    'static/robots.txt': {
+        'path': 'robots.txt'
+    },
+    'static/google7e93ca521c7ff343.html': {
+        'path': 'google7e93ca521c7ff343.html'
+    },
+    'static/googleca17b845931f3580.html': {
+        'path': 'googleca17b845931f3580.html'
+    }
 }
 
 # Readjust all the paths as I prefer URLs which do not end in .html
 ########################################
+DRAFT_SAVE_AS = 'drafts/{slug}/index.html'
+DRAFT_LANG_SAVE_AS = 'drafts/{slug}/{lang}/index.html'
+DRAFT_URL = 'drafts/{slug}/'
+DRAFT_LANG_URL = 'drafts/{slug}/{lang}'
+
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
+ARTICLE_LANG_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/{lang}/index.html'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
+ARTICLE_LANG_URL = '{date:%Y}/{date:%m}/{slug}/{lang}'
 
 PAGE_SAVE_AS = '{slug}/index.html'
+PAGE_LANG_SAVE_AS = '{slug}/{lang}/index.html'
 PAGE_URL = '{slug}/'
+PAGE_LANG_URL = '{slug}/{lang}/'
 
 CATEGORIES_SAVE_AS = 'category/index.html'
 CATEGORIES_URL = 'category/'
@@ -104,9 +126,10 @@ RELATIVE_URLS = True
 LINKS = ()
 
 # Social widget
-SOCIAL = (('Github', 'https://github.com/JP-Ellis'),
-          ('Email', 'mailto:josh@jpellis.me'),
-          ('LinkedIn', 'https://au.linkedin.com/in/joshuapellis'),
+SOCIAL = (
+    ('Github', 'https://github.com/JP-Ellis'),
+    ('Email', 'mailto:josh@jpellis.me'),
+    ('LinkedIn', 'https://au.linkedin.com/in/joshuapellis'),
 )
 
 # Defaults
@@ -172,3 +195,7 @@ MARKDOWN = {
     },
     'output_format': 'html5',
 }
+
+# Typogrify
+################################################################################
+TYPOGRIFY = True
