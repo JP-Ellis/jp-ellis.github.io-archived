@@ -50,7 +50,7 @@ THEME = 'themes/jp-ellis'
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
 PAGE_PATHS = ['pages']
-STATIC_PATHS = ['blog', 'pages', 'static']
+STATIC_PATHS = ['static']
 EXTRA_PATH_METADATA = {
     'static/CNAME': {
         'path': 'CNAME'
