@@ -111,7 +111,7 @@ complex
 <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">force-based</a>
 algorithms quickly become too complex to be practical to implement purely in
 TeX.  In order to implement these more complex graph drawing algorithms into
-<span class="caps">PGF</span>/Ti<em>k</em>Z, Jannis Pohlmann used the Lua_ scripting language<sup id="fnref-pohlmann"><a class="footnote-ref" href="#fn-pohlmann">1</a></sup> which
+<span class="caps">PGF</span>/Ti<em>k</em>Z, Jannis Pohlmann used the Lua_ scripting language<sup id="fnref:pohlmann"><a class="footnote-ref" href="#fn:pohlmann">1</a></sup> which
 has native support provided through the LuaTeX&nbsp;engine.</p>
 <p>Although LuaTeX is now considered stable and has been shipped with every TeXLive
 distribution <a href="http://www.luatex.org/roadmap.html">since 2009</a>, they have not
@@ -367,7 +367,7 @@ makefiles by this can be fixed by adding the following to <code>~/.latexmkrc</co
 replace <code>-j5</code> on line 27 with a smaller number if you computer has fewer cores
 (I have it set to be one more than the number of cores I&nbsp;have).</p>
 <p>To compile the document, you now need to run <code>latexmk &lt;name&gt;.tex</code> once and
-everything should work fine.<sup id="fnref-latexmk"><a class="footnote-ref" href="#fn-latexmk">2</a></sup>_</p>
+everything should work fine.<sup id="fnref:latexmk"><a class="footnote-ref" href="#fn:latexmk">2</a></sup>_</p>
 <h1>Bundling&nbsp;TikZ-Feynman</h1>
 <p>If the journal your are submitting to is using a version of Ti<em>k</em>Z released
 after 2013 and they are only missing Ti<em>k</em>Z-Feynman, then you can quite easily
@@ -402,16 +402,16 @@ permission to submit the <span class="caps">PDF</span>&nbsp;only.</p>
 <div class="footnote">
 <hr>
 <ol>
-<li id="fn-pohlmann">
+<li id="fn:pohlmann">
 <p>J. Pohlmann,
 <a href="http://www.tcs.uni-luebeck.de/downloads/papers/2011/2011-configurable-graph-drawing-algorithms-jannis-pohlmann.pdf">Configurable graph drawing algorithms for the TikZ graphics description language</a>,
 Masters thesis (Institute of Theoretical Computer Science, Universität zu
-Lübeck, Lübeck, Germany, 2011).&#160;<a class="footnote-backref" href="#fnref-pohlmann" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+Lübeck, Lübeck, Germany, 2011).&#160;<a class="footnote-backref" href="#fnref:pohlmann" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn-latexmk">
+<li id="fn:latexmk">
 <p>Note that on the very first run, LatexMk won&#8217;t actually recompile
 the master TeX file after having generated the pictures.  This occurs only
-on the very first run.&#160;<a class="footnote-backref" href="#fnref-latexmk" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+on the very first run.&#160;<a class="footnote-backref" href="#fnref:latexmk" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

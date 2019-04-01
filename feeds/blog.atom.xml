@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Joshua Ellis - blog</title><link href="https://jpellis.me/" rel="alternate"></link><link href="https://jpellis.me/feeds/blog.atom.xml" rel="self"></link><id>https://jpellis.me/</id><updated>2015-12-08T00:00:00+11:00</updated><entry><title>Git Hooks</title><link href="https://jpellis.me/article/git-hooks/" rel="alternate"></link><published>2015-12-08T00:00:00+11:00</published><updated>2015-12-08T00:00:00+11:00</updated><author><name>Joshua Ellis</name></author><id>tag:jpellis.me,2015-12-08:/article/git-hooks/</id><summary type="html">&lt;p&gt;Git is a powerful version control system which has become the &lt;em&gt;de facto&lt;/em&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Joshua Ellis - blog</title><link href="https://jpellis.me/" rel="alternate"></link><link href="https://jpellis.me/feeds/blog.atom.xml" rel="self"></link><id>https://jpellis.me/</id><updated>2015-12-08T00:00:00+11:00</updated><subtitle>PhD Candidate</subtitle><entry><title>Git Hooks</title><link href="https://jpellis.me/article/git-hooks/" rel="alternate"></link><published>2015-12-08T00:00:00+11:00</published><updated>2015-12-08T00:00:00+11:00</updated><author><name>Joshua Ellis</name></author><id>tag:jpellis.me,2015-12-08:/article/git-hooks/</id><summary type="html">&lt;p&gt;Git is a powerful version control system which has become the &lt;em&gt;de facto&lt;/em&gt;
 standard in recent years (judging by the popularity
 of &lt;a href="https://www.github.com/"&gt;Github&lt;/a&gt;).  Perhaps one of Git&amp;#8217;s underused features
 is its &lt;a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;hooks&lt;/a&gt;: small
@@ -31,7 +31,7 @@ any&amp;nbsp;task.&lt;/p&gt;
 with &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt;.  Github Pages allows you to host
 your website for free with Github, and all you need to do is create a repository
 called &lt;code&gt;USERNAME.github.io&lt;/code&gt; and then Github will automatically start serving the
-&lt;span class="caps"&gt;HTML&lt;/span&gt; files from the &lt;code&gt;master&lt;/code&gt; branch of that repository&lt;sup id="fnref-fn:jekyll"&gt;&lt;a class="footnote-ref" href="#fn-fn:jekyll"&gt;1&lt;/a&gt;&lt;/sup&gt;.  Github
+&lt;span class="caps"&gt;HTML&lt;/span&gt; files from the &lt;code&gt;master&lt;/code&gt; branch of that repository&lt;sup id="fnref:fn:jekyll"&gt;&lt;a class="footnote-ref" href="#fn:fn:jekyll"&gt;1&lt;/a&gt;&lt;/sup&gt;.  Github
 Pages also allows you to have per-projects websites.  In this case, you need to
 create a branch called &lt;code&gt;gh-pages&lt;/code&gt; in any of your current repositories and Github
 will then serve the content of that branch over at
@@ -148,11 +148,11 @@ takes care of pushing all the changes to the website&amp;nbsp;automatically.&lt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id="fn-fn:jekyll"&gt;
+&lt;li id="fn:fn:jekyll"&gt;
 &lt;p&gt;Github also supports Jekyll sites.  In this case, you can just
 upload the Jekyll source files and Github will automatically generate the output
 and serve that.  Unfortunately, you can&amp;#8217;t customize which Gems Github uses, so
-this option is not as flexible.&amp;#160;&lt;a class="footnote-backref" href="#fnref-fn:jekyll" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+this option is not as flexible.&amp;#160;&lt;a class="footnote-backref" href="#fnref:fn:jekyll" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="git"></category></entry></feed>
