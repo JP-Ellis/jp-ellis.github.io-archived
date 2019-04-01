@@ -120,15 +120,17 @@ RELATIVE_URLS = True
 # Links
 ################################################################################
 
-# Blogroll
-LINKS = ()
+# Links
+LINKS = [
+    ('Curriculum Vitae', 'https://jpellis.me/CV/JoshuaEllis-web.pdf'),
+]
 
 # Social widget
-SOCIAL = (
+SOCIAL = [
     ('Github', 'https://github.com/JP-Ellis'),
     ('Email', 'mailto:josh@jpellis.me'),
     ('LinkedIn', 'https://au.linkedin.com/in/joshuapellis'),
-)
+]
 
 # Defaults
 ################################################################################
