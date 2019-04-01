@@ -4,17 +4,17 @@
     "description": "",
     "main": "index.js",
     "dependencies": {
-        "del": "^3.0.0",
+        "del": "^4.0.0",
         "gulp": "^4.0.0",
-        "gulp-autoprefixer": "^5.0.0",
+        "gulp-autoprefixer": "^6.0.0",
         "gulp-cssnano": "^2.1.3",
-        "gulp-livereload": "*",
-        "gulp-minify": "^2.1.0",
-        "gulp-rename": "*",
-        "gulp-sass": "*",
-        "gulp-uncss": "*",
-        "gulp-wait": "*",
-        "vinyl-paths": "*"
+        "gulp-livereload": "^4.0.1",
+        "gulp-minify": "^3.0.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uncss": "^1.0.6",
+        "gulp-wait": "^0.0.2",
+        "vinyl-paths": "^2.1.0"
     },
     "devDependencies": {},
     "scripts": {
