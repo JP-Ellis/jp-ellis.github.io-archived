@@ -13,7 +13,13 @@ var paths = {
     sass: ['css/**/*.scss'],
     fonts: ['fonts/*.woff2', 'fonts/*.woff', 'fonts/*.ttf'],
     gulp: ['gulpfile.js'],
-    images: ['images/**/*.png', 'images/**/*.jpg', 'images/**/*.jpeg', 'images/**/*.svg']
+    images: [
+        'images/**/*.jpeg',
+        'images/**/*.jpg',
+        'images/**/*.png',
+        'images/**/*.svg',
+        'images/**/*.webp'
+    ]
 };
 
 gulp.task('css', function(done) {
