@@ -66,6 +66,10 @@ EXTRA_PATH_METADATA = {
     }
 }
 
+IGNORE_FILES = [
+    'index.html',
+]
+
 # Readjust all the paths as I prefer URLs which do not end in .html
 ########################################
 DRAFT_SAVE_AS = 'drafts/{slug}/index.html'
