@@ -123,7 +123,7 @@ RELATIVE_URLS = True
 
 # Links
 LINKS = [
-    ('Curriculum Vitae', 'https://jpellis.me/CV/JoshuaEllis-web.pdf'),
+    ('Curriculum Vitæ', 'https://jpellis.me/CV/JoshuaEllis-web.pdf'),
 ]
 
 # Social widget
