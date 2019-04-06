@@ -6,14 +6,13 @@ PUBLISH = False
 LOAD_CONTENT_CACHE = False
 
 # Site Information
-################################################################################
-AUTHOR = 'Joshua Ellis'
+###############################################################################
+AUTHOR = 'Joshua P. Ellis'
 SITENAME = "Joshua Ellis"
 SITETITLE = "Joshua Ellis"
 SITESUBTITLE = "PhD Candidate"
 SITEDESCRIPTION = "Blog of young physicist Joshua Ellis"
 SITEURL = 'http://localhost:8000'
-# SITEURL = 'http://10.9.146.61:8000'
 TIMEZONE = 'Australia/Melbourne'
 DEFAULT_LANG = 'en_AU'
 OG_LOCALE = DEFAULT_LANG
@@ -26,14 +25,16 @@ CC_LICENSE = {
 
 FRONTMATTER = """
 <p>
-I'm Joshua Ellis, a PhD candidate at <a href="https://unimelb.edu.au">The University of Melbourne</a>.  My current
-research focuses leptogenesis in radiative neutrino mass models.
+I'm Joshua Ellis, a PhD candidate at <a href="https://unimelb.edu.au">The
+University of Melbourne</a>.  My current research focuses leptogenesis in
+radiative neutrino mass models.
 </p>
 
 <p>
-In addition to physics, I also enjoy coding.  I have programmed in in C, C++, <a
-href="https://www.rust-lang.org">Rust</a>, Python and TeX/LaTeX.  You can see some of the coding projects I have worked
-in over in the <a href="http://www.jpellis.me/projects/">projects section</a>.
+In addition to physics, I also enjoy coding.  I have programmed in in C, C++,
+<a href="https://www.rust-lang.org">Rust</a>, Python and TeX/LaTeX.  You can
+see some of the coding projects I have worked in over in the <a
+href="http://www.jpellis.me/projects/">projects section</a>.
 </p>
 
 <p>
@@ -42,11 +43,11 @@ Feel free to share what you like and I'd love to hear from you.
 """
 
 # Theme
-################################################################################
+###############################################################################
 THEME = 'themes/jp-ellis'
 
 # Paths
-################################################################################
+###############################################################################
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
 PAGE_PATHS = ['pages']
@@ -107,7 +108,7 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = ''
 
 # Feeds
-################################################################################
+###############################################################################
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
@@ -118,7 +119,7 @@ AUTHOR_FEED_RSS = None
 RELATIVE_URLS = True
 
 # Links
-################################################################################
+###############################################################################
 
 # Links
 LINKS = [
@@ -133,18 +134,18 @@ SOCIAL = [
 ]
 
 # Defaults
-################################################################################
+###############################################################################
 DEFAULT_PAGINATION = 5
 DEFAULT_METADATA = {
     'status': 'draft',
 }
 
 # Jinja Settings
-################################################################################
+###############################################################################
 JINJA_ENVIRONMENT = {}
 
 # Plugins
-################################################################################
+###############################################################################
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'pelican-page-hierarchy',
@@ -154,7 +155,7 @@ PLUGINS = [
 ]
 
 # Sitemap
-########################################
+###############################################################################
 SITEMAP = {
     'format': 'xml',
     'priorities': {
@@ -170,20 +171,20 @@ SITEMAP = {
 }
 
 # Pygments
-################################################################################
+###############################################################################
 PYGMENTS_RST_OPTIONS = {
     'linenos': 'table',
 }
 
 # Render Math
-################################################################################
+###############################################################################
 MATH_JAX = {
     'auto_insert': False,
     'tex_extensions': ['autoload-all.js'],
 }
 
 # Markdown
-################################################################################
+###############################################################################
 MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {
@@ -197,5 +198,5 @@ MARKDOWN = {
 }
 
 # Typogrify
-################################################################################
+###############################################################################
 TYPOGRIFY = True
